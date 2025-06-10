@@ -61,7 +61,7 @@
         /* Typography */
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--brown-text);
             text-align: center;
@@ -70,16 +70,16 @@
         }
 
         .section-subtitle {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--accent-red);
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             font-weight: 500;
         }
 
         /* Header */
         .header {
-            position: fixed;
+            position: sticky;
             top: 0;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
@@ -90,21 +90,40 @@
         }
 
         .navbar {
-            padding: 1rem 0;
+            padding: 0.7rem 0;
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        .nav-logo {
+            flex: 1;
+        }
+
+        .nav-menu {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-cta-btn, .hamburger {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .nav-logo .logo-text {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--brown-text);
         }
@@ -112,18 +131,14 @@
         .logo-script {
             font-family: 'Dancing Script', cursive;
             color: var(--primary-orange);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+            font-size: 1.1rem;
         }
 
         .nav-link {
             text-decoration: none;
             color: var(--brown-text);
             font-weight: 500;
+            font-size: 0.75rem;
             transition: color 0.3s ease;
             position: relative;
         }
@@ -151,12 +166,17 @@
             background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
+            width: 150px;
+            height: 30px;
+            border-radius: 12px;
             font-weight: 600;
+            font-size: 0.7rem;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .nav-cta-btn:hover {
@@ -180,13 +200,13 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 80vh;
             background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-red) 100%);
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 80px; /* Tambah padding untuk desktop */
+            padding-top: 60px; /* Tambah padding untuk desktop */
         }
 
         .hero::before {
@@ -201,7 +221,7 @@
         }
 
         .hero-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
             display: grid;
@@ -218,7 +238,7 @@
 
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: 3.8rem;
+            font-size: 2.5rem;
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 1rem;
@@ -226,7 +246,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 1rem;
             opacity: 0.95;
@@ -234,10 +254,10 @@
         }
 
         .hero-description {
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
             opacity: 0.9;
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
         .hero-cta-btn {
@@ -331,7 +351,7 @@
         }
 
         .about-description {
-            font-size: 1.1rem;
+            font-size: 14.4px;
             line-height: 1.8;
             margin-bottom: 1.5rem;
             color: var(--brown-text);
@@ -359,7 +379,7 @@
 
         .stat-number {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary-orange);
             margin-bottom: 0.5rem;
@@ -368,6 +388,7 @@
         .stat-label {
             color: var(--brown-text);
             font-weight: 500;
+            font-size: 0.85rem;
         }
 
         .about-image img {
@@ -386,27 +407,27 @@
 
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
         }
 
         .menu-item {
             background: white;
-            border-radius: 25px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 15px 35px var(--shadow);
+            box-shadow: 0 10px 25px var(--shadow);
             transition: all 0.3s ease;
             border: 1px solid var(--warm-cream);
         }
 
         .menu-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(210, 0, 31, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(210, 0, 31, 0.2);
         }
 
         .menu-image {
             position: relative;
-            height: 220px;
+            height: 160px;
             overflow: hidden;
         }
 
@@ -430,36 +451,36 @@
         }
 
         .menu-content {
-            padding: 2rem;
+            padding: 1.2rem;
         }
 
         .menu-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--brown-text);
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
         }
 
         .menu-description {
             color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            font-size: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
         }
 
         .menu-sizes {
             display: flex;
             flex-direction: column;
-            gap: 0.8rem;
-            margin-bottom: 2rem;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .size-option {
             background: var(--warm-cream);
-            padding: 0.8rem 1.2rem;
-            border-radius: 12px;
-            font-size: 0.95rem;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
             font-weight: 500;
             color: var(--brown-text);
             border: 1px solid var(--primary-orange);
@@ -470,10 +491,10 @@
             background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
             color: white;
             border: none;
-            padding: 1.2rem;
-            border-radius: 15px;
+            padding: 0.8rem;
+            border-radius: 10px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
@@ -490,23 +511,80 @@
             background: var(--light-cream);
         }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+        .testimonials .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-slider {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .testimonials-track {
+            display: flex;
+            gap: 1rem;
+            transition: transform 0.5s ease;
         }
 
         .testimonial-item {
-            background: white;
-            border-radius: 25px;
-            padding: 2.5rem;
+            flex: 0 0 50%; /* Adjust flex basis */
+            margin: 0;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 20px;
             box-shadow: 0 15px 35px var(--shadow);
-            transition: transform 0.3s ease;
             border: 1px solid var(--warm-cream);
+            min-height: 200px;
+            box-sizing: border-box;
         }
 
-        .testimonial-item:hover {
-            transform: translateY(-5px);
+        .testimonials-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .nav-prev, .nav-next {
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-prev:hover, .nav-next:hover {
+            background: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        .testimonials-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--warm-cream);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--primary-orange);
+            transform: scale(1.2);
         }
 
         .stars {
@@ -695,7 +773,7 @@
             padding: 0;
             border-radius: 25px;
             width: 90%;
-            max-width: 520px;
+            max-width: 450px;
             position: relative;
             animation: modalSlideIn 0.3s ease-out;
             overflow: hidden;
@@ -860,30 +938,38 @@
             }
 
             .hero {
-                padding-top: 100px; /* Tambah padding lebih besar untuk mobile */
-                min-height: calc(100vh - 20px); /* Kurangi sedikit tinggi untuk memberi ruang */
+                padding-top: 80px;
+                min-height: 70vh;
             }
 
             .hero-container {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1rem;
                 text-align: center;
-                padding: 2rem 15px 0; /* Tambah padding top */
+                padding: 2rem 15px;
             }
 
             .hero-title {
-                font-size: 2.8rem;
-                margin-top: 1rem; /* Tambah margin top */
+                font-size: 2rem;
+                margin-top: 0;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-description {
+                font-size: 0.85rem;
             }
 
             .hero-image img {
-                width: 300px;
-                height: 300px;
+                width: 280px;
+                height: 280px;
             }
 
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1rem;
             }
 
             .about-text {
@@ -892,25 +978,37 @@
 
             .about-stats {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 1rem;
             }
 
             .contact-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
             }
 
             .nav-menu {
                 position: fixed;
                 left: -100%;
-                top: 70px;
+                top: 60px;
                 flex-direction: column;
                 background-color: white;
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
                 box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-                padding: 2rem 0;
+                padding: 1rem 0;
+                flex: none;
+                justify-content: center;
+            }
+
+            .nav-logo,
+            .nav-cta-btn,
+            .hamburger {
+                flex: none;
             }
 
             .nav-menu.active {
@@ -934,49 +1032,57 @@
             }
 
             .section-title {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.9rem;
             }
 
             .modal-content {
-                margin: 8% auto;
-                width: 95%;
+                margin: 10% auto;
+                width: 90%;
             }
 
             .modal-header {
-                padding: 2rem 1.5rem;
+                padding: 1.5rem;
             }
 
             .modal-header h2 {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
+            }
+
+            .modal-header p {
+                font-size: 0.9rem;
             }
 
             .modal-body {
-                padding: 2rem 1.5rem;
+                padding: 1.5rem;
             }
 
             .order-btn {
-                padding: 1rem 1.2rem;
-                font-size: 0.95rem;
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
             }
 
             .delivery-partners {
-                gap: 0.6rem;
+                gap: 0.5rem;
             }
 
             .delivery-partner {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.8rem;
+                padding: 0.3rem 0.6rem;
+                font-size: 0.7rem;
             }
         }
 
         @media (max-width: 480px) {
             .hero-title {
-                font-size: 2.2rem;
+                font-size: 1.6rem;
             }
 
             .hero-image img {
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
             }
 
             .menu-grid {
@@ -985,6 +1091,18 @@
 
             .testimonials-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-item {
+                flex: 0 0 33.333%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .testimonial-item {
+                flex: 0 0 100%;
             }
         }
     </style>
@@ -1200,59 +1318,120 @@
             <h2 class="section-title">Kata Mereka yang Sudah Merasakan</h2>
             <p class="section-subtitle">Testimoni nyata dari pelanggan yang puas dan bahagia</p>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-item">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <div class="testimonial-item">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"MasyaAllah, lasagna beef-nya benar-benar luar biasa! Rasanya seperti buatan mama sendiri, keju-nya melimpah dan dagingnya empuk banget. Anak-anak sampai minta tambah terus. Pokoknya jadi langganan deh!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div>
+                                <div class="author-name">Sarah Wijaya</div>
+                                <div class="author-location">Jakarta Selatan</div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="testimonial-text">"MasyaAllah, lasagna beef-nya benar-benar luar biasa! Rasanya seperti buatan mama sendiri, keju-nya melimpah dan dagingnya empuk banget. Anak-anak sampai minta tambah terus. Pokoknya jadi langganan deh!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">S</div>
-                        <div>
-                            <div class="author-name">Sarah Wijaya</div>
-                            <div class="author-location">Jakarta Selatan</div>
+
+                    <div class="testimonial-item">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Packaging-nya rapi banget, rasa autentik kayak di restoran Italia mahal, tapi harganya sangat terjangkau. Ninna's Recipe emang the best untuk comfort food keluarga. Recommended banget!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div>
+                                <div class="author-name">Rizki Pratama</div>
+                                <div class="author-location">Tangerang</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Sudah order berkali-kali dan selalu konsisten rasanya. Lasagna beef-nya juara banget, cheese-nya melimpah dan pasta-nya perfectly cooked. Suami dan anak-anak selalu excited kalau ada Ninna's Recipe!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div>
+                                <div class="author-name">Maya Sari</div>
+                                <div class="author-location">Bekasi</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Pertama kali coba langsung jatuh cinta! Lasagna vegetarian-nya luar biasa enak, ga nyangka makanan vegetarian bisa seenak ini. Porsinya juga pas banget untuk keluarga. Thank you Ninna's Recipe!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">L</div>
+                            <div>
+                                <div class="author-name">Linda Kusuma</div>
+                                <div class="author-location">Depok</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Saya pecinta pasta dan lasagna, dan bisa dibilang Ninna's Recipe ini top markotop! Bumbunya pas, kejunya premium, dan yang paling penting konsisten tiap order. Worth every penny!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div>
+                                <div class="author-name">Andi Putra</div>
+                                <div class="author-location">BSD</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Selalu jadi andalan untuk acara keluarga. Pelayanannya ramah, pengirimannya tepat waktu, dan yang pasti rasanya selalu bikin ketagihan. The best homemade lasagna in town!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div>
+                                <div class="author-name">Dewi Anggraini</div>
+                                <div class="author-location">Jakarta Barat</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="testimonial-item">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Packaging-nya rapi banget, rasa autentik kayak di restoran Italia mahal, tapi harganya sangat terjangkau. Ninna's Recipe emang the best untuk comfort food keluarga. Recommended banget!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">R</div>
-                        <div>
-                            <div class="author-name">Rizki Pratama</div>
-                            <div class="author-location">Tangerang</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Sudah order berkali-kali dan selalu konsisten rasanya. Lasagna beef-nya juara banget, cheese-nya melimpah dan pasta-nya perfectly cooked. Suami dan anak-anak selalu excited kalau ada Ninna's Recipe!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div>
-                            <div class="author-name">Maya Sari</div>
-                            <div class="author-location">Bekasi</div>
-                        </div>
-                    </div>
+                <div class="testimonials-nav">
+                    <button class="nav-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonials-dots"></div>
+                    <button class="nav-next"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
@@ -1491,6 +1670,56 @@
                 this.style.transform = 'translateY(0) scale(1)';
             });
         });
+
+        // Testimonials Slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        const totalTestimonials = testimonials.length;
+        const track = document.querySelector('.testimonials-track');
+        const dotsContainer = document.querySelector('.testimonials-dots');
+        const prevBtn = document.querySelector('.nav-prev');
+        const nextBtn = document.querySelector('.nav-next');
+
+        // Create dots
+        for (let i = 0; i < totalTestimonials; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToTestimonial(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+            const slideWidth = document.querySelector('.testimonial-item').offsetWidth;
+            track.style.transform = `translateX(-${currentTestimonial * slideWidth}px)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentTestimonial);
+            });
+        }
+
+        function goToTestimonial(index) {
+            currentTestimonial = index;
+            updateSlider();
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            updateSlider();
+        }
+
+        function prevTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+            updateSlider();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextTestimonial);
+        prevBtn.addEventListener('click', prevTestimonial);
+
+        // Initialize slider
+        updateSlider();
     </script>
 </body>
 </html>
