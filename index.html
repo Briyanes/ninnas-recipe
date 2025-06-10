@@ -667,16 +667,17 @@
             font-weight: 600;
             color: var(--brown-text);
             margin-bottom: 0.25rem;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
         }
 
         .contact-item p {
             color: #666;
+            font-size: 0.85rem;
         }
 
         .contact-cta {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2rem 1.5rem;
             background: var(--warm-cream);
             border-radius: 25px;
             border: 2px solid var(--primary-orange);
@@ -684,15 +685,15 @@
 
         .contact-cta h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 1.4rem;
             color: var(--brown-text);
             margin-bottom: 1rem;
         }
 
         .contact-cta p {
             color: var(--brown-text);
-            margin-bottom: 2rem;
-            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
         }
 
         .contact-cta-btn {
@@ -717,30 +718,32 @@
         .footer {
             background: var(--brown-text);
             color: white;
-            padding: 4rem 0 1.5rem;
+            padding: 3rem 0 1rem;
+            font-size: 0.85rem;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 2rem;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .footer-section h3 {
             font-family: 'Playfair Display', serif;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--primary-orange);
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
 
         .footer-section p,
         .footer-section a {
             color: #ccc;
             text-decoration: none;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             display: block;
             transition: color 0.3s ease;
+            font-size: 0.85rem;
         }
 
         .footer-section a:hover {
@@ -749,9 +752,10 @@
 
         .footer-bottom {
             border-top: 1px solid #444;
-            padding-top: 1.5rem;
+            padding-top: 1rem;
             text-align: center;
             color: #999;
+            font-size: 0.75rem;
         }
 
         /* Modal/Popup Styles */
@@ -794,20 +798,20 @@
         .modal-header {
             background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
             color: white;
-            padding: 2.5rem 2rem;
+            padding: 1.5rem;
             text-align: center;
             position: relative;
         }
 
         .modal-header h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
         }
 
         .modal-header p {
             opacity: 0.9;
-            font-size: 1.05rem;
+            font-size: 0.9rem;
         }
 
         .close {
@@ -826,28 +830,34 @@
         }
 
         .modal-body {
-            padding: 2.5rem 2rem;
+            padding: 1.5rem;
         }
 
         .order-buttons {
             display: grid;
-            gap: 1.2rem;
+            gap: 0.6rem;
         }
 
         .order-btn {
             display: flex;
             align-items: center;
-            gap: 1.2rem;
-            padding: 1.2rem 1.8rem;
+            gap: 0.6rem;
+            padding: 0.6rem 1rem;
             border: none;
             border-radius: 18px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.8rem;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             color: white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 480px) {
+            .order-btn {
+                font-size: 0.5rem;
+            }
         }
 
         .order-btn:hover {
@@ -898,12 +908,12 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .modal-footer {
-            background: var(--warm-cream);
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
+.modal-footer {
+    background: var(--warm-cream);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
 
         .modal-footer h4 {
             color: var(--brown-text);
@@ -912,24 +922,17 @@
             font-weight: 600;
         }
 
-        .delivery-partners {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
+.delivery-partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem; /* Reduce the gap even further */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-        .delivery-partner {
-            background: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            color: var(--brown-text);
-            font-weight: 500;
-            box-shadow: 0 3px 8px rgba(210, 0, 31, 0.1);
-            border: 1px solid var(--primary-orange);
-        }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
@@ -938,7 +941,7 @@
             }
 
             .hero {
-                padding-top: 80px;
+                padding-top: 30px;
                 min-height: 70vh;
             }
 
@@ -1516,8 +1519,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Pilih Platform Pemesanan</h2>
-                <p>Pesan Lasagna Ninna's Recipe favorit Anda sekarang juga!</p>
+                <h2>Pilih Order Lewat?</h2>
             </div>
             <div class="modal-body">
                 <div class="order-buttons">
@@ -1541,29 +1543,26 @@
                         <span>Pesan di Shopee</span>
                     </a>
                     
-                    <div class="order-btn btn-coming-soon">
+<div class="order-btn btn-coming-soon">
                         <i class="fas fa-motorcycle"></i>
-                        <span>Pesan di GoFood (Segera Hadir)</span>
+                        <span>Pesan di GoFood</span>
                     </div>
                     
                     <div class="order-btn btn-coming-soon">
                         <i class="fas fa-utensils"></i>
-                        <span>Pesan di ShopeeFood (Segera Hadir)</span>
+                        <span>Pesan di ShopeeFood</span>
                     </div>
                     
                     <div class="order-btn btn-coming-soon">
                         <i class="fas fa-car"></i>
-                        <span>Pesan di GrabFood (Segera Hadir)</span>
+                        <span>Pesan di GrabFood</span>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
+<div class="modal-footer">
                 <h4>Pengiriman melalui:</h4>
                 <div class="delivery-partners">
-                    <span class="delivery-partner">Grab Express</span>
-                    <span class="delivery-partner">GoSend</span>
-                    <span class="delivery-partner">Paxel</span>
-                    <span class="delivery-partner">Lalamove</span>
+                    Grab Express | GoSend | Paxel | Lalamove
                 </div>
             </div>
         </div>
@@ -1723,4 +1722,3 @@
     </script>
 </body>
 </html>
-
