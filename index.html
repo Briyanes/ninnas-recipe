@@ -186,6 +186,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding-top: 80px; /* Tambah padding untuk desktop */
         }
 
         .hero::before {
@@ -267,25 +268,13 @@
             align-items: center;
         }
 
-        .hero-image-placeholder {
+        .hero-image img {
             width: 400px;
             height: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            object-fit: cover;
             border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 3rem;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-image-placeholder p {
-            font-size: 1rem;
-            margin-top: 1rem;
-            opacity: 0.8;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
 
         .hero-scroll-indicator {
@@ -381,24 +370,12 @@
             font-weight: 500;
         }
 
-        .about-image-placeholder {
+        .about-image img {
             width: 100%;
             height: 450px;
-            background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
+            object-fit: cover;
             border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 3rem;
             box-shadow: 0 15px 35px rgba(255, 107, 53, 0.3);
-        }
-
-        .about-image-placeholder p {
-            font-size: 1rem;
-            margin-top: 1rem;
-            opacity: 0.9;
         }
 
         /* Menu Section */
@@ -433,16 +410,10 @@
             overflow: hidden;
         }
 
-        .menu-image-placeholder {
+        .menu-image img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--secondary-orange), var(--accent-red));
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 2.5rem;
+            object-fit: cover;
         }
 
         .menu-badge {
@@ -888,18 +859,24 @@
                 padding: 0 15px;
             }
 
+            .hero {
+                padding-top: 100px; /* Tambah padding lebih besar untuk mobile */
+                min-height: calc(100vh - 20px); /* Kurangi sedikit tinggi untuk memberi ruang */
+            }
+
             .hero-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
                 text-align: center;
-                padding: 0 15px;
+                padding: 2rem 15px 0; /* Tambah padding top */
             }
 
             .hero-title {
                 font-size: 2.8rem;
+                margin-top: 1rem; /* Tambah margin top */
             }
 
-            .hero-image-placeholder {
+            .hero-image img {
                 width: 300px;
                 height: 300px;
             }
@@ -997,10 +974,9 @@
                 font-size: 2.2rem;
             }
 
-            .hero-image-placeholder {
+            .hero-image img {
                 width: 250px;
                 height: 250px;
-                font-size: 2rem;
             }
 
             .menu-grid {
@@ -1051,10 +1027,8 @@
                 </button>
             </div>
             <div class="hero-image">
-                <div class="hero-image-placeholder">
-                    <i class="fas fa-heart"></i>
-                    <p>Foto Lasagna Lezat</p>
-                </div>
+                <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
+                <img src="https://your-wordpress-site.com/wp-content/uploads/hero-lasagna.jpg" alt="Lasagna Premium Ninna's Recipe" />
             </div>
         </div>
         <div class="hero-scroll-indicator">
@@ -1095,10 +1069,8 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="about-image-placeholder">
-                        <i class="fas fa-home"></i>
-                        <p>Dapur Keluarga Ninna</p>
-                    </div>
+                    <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
+                    <img src="https://your-wordpress-site.com/wp-content/uploads/family-cooking.jpg" alt="Dapur Keluarga Ninna" />
                 </div>
             </div>
         </div>
@@ -1114,9 +1086,8 @@
                 <!-- Lasagna Beef -->
                 <div class="menu-item">
                     <div class="menu-image">
-                        <div class="menu-image-placeholder">
-                            <i class="fas fa-fire"></i>
-                        </div>
+                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
+                        <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-beef.jpg" alt="Lasagna Beef Premium" />
                         <div class="menu-badge">Terlaris!</div>
                     </div>
                     <div class="menu-content">
@@ -1134,9 +1105,8 @@
                 <!-- Lasagna Chicken -->
                 <div class="menu-item">
                     <div class="menu-image">
-                        <div class="menu-image-placeholder">
-                            <i class="fas fa-drumstick-bite"></i>
-                        </div>
+                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
+                        <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-chicken.jpg" alt="Lasagna Chicken Spesial" />
                     </div>
                     <div class="menu-content">
                         <h3 class="menu-title">Lasagna Chicken Spesial</h3>
@@ -1153,9 +1123,8 @@
                 <!-- Lasagna Tuna -->
                 <div class="menu-item">
                     <div class="menu-image">
-                        <div class="menu-image-placeholder">
-                            <i class="fas fa-fish"></i>
-                        </div>
+                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
+                        <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-tuna.jpg" alt="Lasagna Tuna Mediterania" />
                     </div>
                     <div class="menu-content">
                         <h3 class="menu-title">Lasagna Tuna Mediterania</h3>
@@ -1172,9 +1141,8 @@
                 <!-- Lasagna Vegetarian -->
                 <div class="menu-item">
                     <div class="menu-image">
-                        <div class="menu-image-placeholder">
-                            <i class="fas fa-leaf"></i>
-                        </div>
+                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
+                        <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-vegetarian.jpg" alt="Lasagna Vegetarian Garden" />
                         <div class="menu-badge">Sehat & Lezat</div>
                     </div>
                     <div class="menu-content">
@@ -1192,9 +1160,8 @@
                 <!-- Fettuccine Alfredo -->
                 <div class="menu-item">
                     <div class="menu-image">
-                        <div class="menu-image-placeholder">
-                            <i class="fas fa-cheese"></i>
-                        </div>
+                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
+                        <img src="https://your-wordpress-site.com/wp-content/uploads/fettuccine-alfredo.jpg" alt="Fettuccine Alfredo Creamy" />
                     </div>
                     <div class="menu-content">
                         <h3 class="menu-title">Fettuccine Alfredo Creamy</h3>
@@ -1210,9 +1177,8 @@
                 <!-- Spaghetti Bolognese -->
                 <div class="menu-item">
                     <div class="menu-image">
-                        <div class="menu-image-placeholder">
-                            <i class="fas fa-pepper-hot"></i>
-                        </div>
+                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
+                        <img src="https://your-wordpress-site.com/wp-content/uploads/spaghetti-bolognese.jpg" alt="Spaghetti Bolognese Klasik" />
                     </div>
                     <div class="menu-content">
                         <h3 class="menu-title">Spaghetti Bolognese Klasik</h3>
