@@ -94,9 +94,9 @@
         }
 
         .nav-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -143,6 +143,30 @@
             position: relative;
         }
 
+        @media (min-width: 768px) {
+            .navbar {
+                padding: 1.2rem 0;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .nav-logo .logo-text {
+                font-size: 1.3rem;
+            }
+
+            .logo-script {
+                font-size: 1.3rem;
+            }
+
+            .nav-cta-btn {
+                width: 180px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+        }
+
         .nav-link:hover {
             color: var(--primary-orange);
         }
@@ -170,7 +194,7 @@
             height: 30px;
             border-radius: 12px;
             font-weight: 600;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
@@ -221,7 +245,7 @@
         }
 
         .hero-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             display: grid;
@@ -1139,16 +1163,15 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Kelezatan Warisan Keluarga yang Tak Terlupakan</h1>
-                <p class="hero-subtitle">Lasagna Premium Buatan Rumah</p>
-                <p class="hero-description">Sejak 2001, resep rahasia Mama Ninna telah menciptakan keajaiban rasa yang memanjakan lidah. Setiap gigitan lasagna kami adalah perpaduan sempurna antara daging sapi premium, keju mozzarella yang meleleh, dan saus tomat yang kaya rasa. Rasakan kehangatan cinta keluarga dalam setiap suapan!</p>
-                <button class="hero-cta-btn" onclick="openModal()">
+                <h1 class="hero-title">Kelezatan yang Tak Pernah Tergantikan</h1>
+                <p class="hero-subtitle">Premium Lasagna with #TasteofMemories</p>
+                <p class="hero-description">Resep turun-temurun yang menyajikan cita rasa tak pernah tergantikan disetiap suapannya sejak 2001. Perpaduan sempurna antara daging sapi pilihan, keju mozarella premium, dengan saus tomat buatan sendiri yang menghadirkan rasa seperti di rumah.</p>
+                <a href="#menu" class="hero-cta-btn">
                     <i class="fas fa-utensils"></i>
-                    Pesan Sekarang Juga!
-                </button>
+                    Lihat Menu
+                </a>
             </div>
             <div class="hero-image">
-                <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
                 <img src="https://your-wordpress-site.com/wp-content/uploads/hero-lasagna.jpg" alt="Lasagna Premium Ninna's Recipe" />
             </div>
         </div>
@@ -1160,8 +1183,8 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Kisah Cinta dalam Setiap Hidangan</h2>
-            <p class="section-subtitle">Warisan rasa yang telah dipercaya sejak 2001</p>
+<h2 class="section-title">Cita Rasa yang Istimewa</h2>
+            <p class="section-subtitle">Generational Delicacy in Every Bite</p>
             
             <div class="about-content">
                 <div class="about-text">
@@ -1212,8 +1235,8 @@
                         <div class="menu-badge">Terlaris!</div>
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-title">Lasagna Beef Premium</h3>
-                        <p class="menu-description">Lapisan daging sapi premium yang empuk, dipadukan dengan keju mozzarella yang meleleh di mulut dan saus tomat rahasia keluarga. Setiap gigitan adalah ledakan rasa yang tak terlupakan!</p>
+<h3 class="menu-title">Lasagna Beef Premium</h3>
+                        <p class="menu-description">Daging sapi pilihan yang dipadukan dengan keju mozarella dan siraman saus tomat buatan rumah, menghadirkan rasa lembut yang menggugah selera!</p>
                         <div class="menu-sizes">
                             <div class="size-option">Personal (1-2 porsi) - Rp 85.000</div>
                             <div class="size-option">Medium (3-4 porsi) - Rp 150.000</div>
@@ -1230,8 +1253,8 @@
                         <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-chicken.jpg" alt="Lasagna Chicken Spesial" />
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-title">Lasagna Chicken Spesial</h3>
-                        <p class="menu-description">Dada ayam pilihan yang dimasak dengan bumbu rempah rahasia, berlapis pasta lembut dan keju yang creamy. Kelezatan yang bikin nagih dan selalu ingin kembali!</p>
+<h3 class="menu-title">Lasagna Chicken Spesial</h3>
+                        <p class="menu-description">Daging dada ayam pilihan yang dimasak dengan rempah berkualitas, dipadukan dengan pasta dan krim keju, menawarkan rasa yang tak pernah terlupakan!</p>
                         <div class="menu-sizes">
                             <div class="size-option">Personal (1-2 porsi) - Rp 80.000</div>
                             <div class="size-option">Medium (3-4 porsi) - Rp 140.000</div>
@@ -1248,8 +1271,8 @@
                         <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-tuna.jpg" alt="Lasagna Tuna Mediterania" />
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-title">Lasagna Tuna Mediterania</h3>
-                        <p class="menu-description">Tuna segar dengan cita rasa Mediterania yang eksotis, dibalut saus putih creamy yang kaya rasa. Pengalaman kuliner yang membawa Anda ke pantai-pantai indah Eropa!</p>
+<h3 class="menu-title">Lasagna Tuna Mediterania</h3>
+                        <p class="menu-description">Daging tuna dengan cita rasa mediterania yang dipadukan dengan saus krim kaya rasa, membawakan pengalaman kuliner seperti di Eropa!</p>
                         <div class="menu-sizes">
                             <div class="size-option">Personal (1-2 porsi) - Rp 75.000</div>
                             <div class="size-option">Medium (3-4 porsi) - Rp 135.000</div>
@@ -1267,8 +1290,8 @@
                         <div class="menu-badge">Sehat & Lezat</div>
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-title">Lasagna Vegetarian Garden</h3>
-                        <p class="menu-description">Sayuran segar pilihan dari kebun, dipadukan dengan keju ricotta dan mozzarella premium. Bukti bahwa makanan sehat bisa sangat lezat dan memuaskan!</p>
+<h3 class="menu-title">Lasagna Vegetarian Garden</h3>
+                        <p class="menu-description">Sayur segar pilihan yang dipadukan dengan Ricotta Cheese dan Mozarella Cheese, menawarkan nutrisi yang bergizi dibalik kelezatan yang memuaskan!</p>
                         <div class="menu-sizes">
                             <div class="size-option">Personal (1-2 porsi) - Rp 70.000</div>
                             <div class="size-option">Medium (3-4 porsi) - Rp 125.000</div>
@@ -1285,8 +1308,8 @@
                         <img src="https://your-wordpress-site.com/wp-content/uploads/fettuccine-alfredo.jpg" alt="Fettuccine Alfredo Creamy" />
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-title">Fettuccine Alfredo Creamy</h3>
-                        <p class="menu-description">Pasta fettuccine al dente dengan saus parmesan creamy yang kaya dan lembut. Setiap suapan adalah kenikmatan yang memanjakan lidah dan menghangatkan hati!</p>
+<h3 class="menu-title">Fettuccine Alfredo Creamy</h3>
+                        <p class="menu-description">Paduan Fettuccini yang dimasak al dente dengan saus parmesan yang creamy dan lembut, menawarkan kenikmatan yang memanjakan lidah!</p>
                         <div class="menu-sizes">
                             <div class="size-option">Regular - Rp 65.000</div>
                             <div class="size-option">Large - Rp 85.000</div>
@@ -1302,8 +1325,8 @@
                         <img src="https://your-wordpress-site.com/wp-content/uploads/spaghetti-bolognese.jpg" alt="Spaghetti Bolognese Klasik" />
                     </div>
                     <div class="menu-content">
-                        <h3 class="menu-title">Spaghetti Bolognese Klasik</h3>
-                        <p class="menu-description">Spaghetti al dente dengan saus daging klasik Italia yang dimasak berjam-jam hingga sempurna. Cita rasa autentik yang membawa Anda langsung ke Roma!</p>
+<h3 class="menu-title">Spaghetti Bolognese Klasik</h3>
+                        <p class="menu-description">Spaghetti yang dimasak al dente dipadukan dengan saus daging klasik khas Italia yang dimasak hingga sempurna, menawarkan cita rasa autentik Negeri Pasta.</p>
                         <div class="menu-sizes">
                             <div class="size-option">Regular - Rp 60.000</div>
                             <div class="size-option">Large - Rp 80.000</div>
@@ -1722,3 +1745,4 @@
     </script>
 </body>
 </html>
+
