@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ninna's Recipe - Kelezatan Warisan Keluarga yang Tak Terlupakan</title>
-    <meta name="description" content="Lasagna Premium Buatan Rumah sejak 2001. Rasakan kehangatan cinta keluarga dalam setiap suapan. Pesan sekarang dan nikmati kelezatan yang tak terlupakan!">
+    <meta name="description" content="Lasagna Premium Buatan Rumah sejak 2001.x Rasakan kehangatan cinta keluarga dalam setiap suapan. Pesan sekarang dan nikmati kelezatan yang tak terlupakan!">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,35 +90,36 @@
             left: 0;
             right: 0;
             width: 100%;
-            height: 25px;
+            height: 70px;
             background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             z-index: 10000;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 20px rgba(210, 0, 31, 0.1);
         }
 
         body {
             padding-top: 60px; /* To prevent content hidden behind fixed header */
         }
 
-        .navbar {
-            padding: 12px 19.2px;
-        }
+            .navbar {
+                padding: 18px 12px; /* Adjusted padding to match screenshot for mobile view */
+            }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 25px;
-        }
+            .nav-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 0px; /* Changed padding left and right to 0px for mobile views */
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start; /* Align items to top */
+                height: 60px; /* Ensure container height */
+            }
 
         .nav-logo {
             flex: none;
             display: flex;
-            align-items: center;
+            align-items: center; /* Vertically center logo */
         }
 
         .nav-menu {
@@ -128,13 +129,14 @@
             list-style: none;
             gap: 1.5rem;
             margin: 0 auto;
+            align-items: center; /* Vertically center menu items */
         }
 
         .nav-cta-btn-container {
             flex: none;
             display: flex;
             justify-content: flex-end;
-            align-items: center;
+            align-items: center; /* Vertically center CTA button */
             width: 180px;
         }
 
@@ -252,13 +254,13 @@
 
         /* Hero Section */
         .hero {
-            min-height: 80vh;
+            min-height: 100vh;
             background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-red) 100%);
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 25px; /* Adjusted padding top to prevent header overlap */
+            padding-top: 60px; /* Added padding top to create space between header and hero */
         }
 
         .hero::before {
@@ -278,10 +280,38 @@
             padding: 0 20px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 1rem; /* Reduced gap from 4rem to 2rem */
             align-items: center;
             position: relative;
             z-index: 2;
+        }
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 1rem; /* Reduced gap from 2rem to 1rem */
+                padding: 0 15px;
+                text-align: center;
+            }
+            .hero-image {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 20px;
+                border: 3px solid rgba(255, 255, 255, 0.3);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+            }
+            .hero-image iframe {
+                position: relative;
+                width: 100%;
+                height: 300px;
+                max-width: 100%;
+                max-height: 100%;
+                transform: none;
+                border-radius: 20px;
+                display: block;
+            }
         }
 
         .hero-content {
@@ -290,7 +320,7 @@
 
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 4.5rem;
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 0.5rem;
@@ -298,7 +328,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.1rem;
+            font-size: 2.1rem;
             font-weight: 600;
             margin-bottom: 1rem;
             opacity: 0.95;
@@ -342,8 +372,9 @@
                 border-radius: 20px;
                 border: 3px solid rgba(255, 255, 255, 0.3);
                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-                width: 400px;
-                height: 400px;
+                width: 900px; /* Further increased width */
+                max-width: 900px; /* Further increased max-width */
+                height: auto;
                 position: relative;
             }
 
@@ -352,10 +383,12 @@
             top: 50%;
             right: 0;
             transform: translate(0, -50%) scale(1.8);
-            width: 400px;
-            height: 400px;
+            width: 100%;
+            max-width: 900px; /* Further increased max-width */
+            height: auto;
             border-radius: 20px;
         }
+
 
         @media (max-width: 768px) {
             .hero-image {
@@ -383,7 +416,7 @@
 
         .hero-scroll-indicator {
             position: absolute;
-            bottom: 2rem;
+            bottom: 4rem;
             left: 50%;
             transform: translateX(-50%);
             color: white;
@@ -493,6 +526,18 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
         }
 
         .menu-item {
@@ -793,6 +838,12 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+        }
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         .contact-item {
@@ -1231,7 +1282,7 @@
 
         @media (max-width: 480px) {
             .hero-title {
-                font-size: 1.6rem;
+                font-size: 2.6rem;
             }
 
             .hero-image img {
@@ -1267,8 +1318,8 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <a href="#home" style="display: inline-block; border: none; padding: 0;">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/ninnas-logo.webp" alt="Ninna's Recipe Logo" style="height: 40px; display: block;"/>
+                    <a href="#home">
+                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/ninnas-logo.webp" alt="Ninna's Recipe Logo" style="height: 40px;"/>
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -1291,7 +1342,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero" style="padding-top: 60px;">
+    <section id="home" class="hero" style="padding-top: 25px;">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Kelezatan yang Tak Pernah Tergantikan</h1>
@@ -1302,7 +1353,7 @@
                     Lihat Menu
                 </a>
             </div>
-            <div class="hero-image" style="width: 350px; height: 350px; overflow: hidden; border-radius: 20px; border: 3px solid rgba(255, 255, 255, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); position: relative;">
+            <div class="hero-image" style="width: 350px; height: 548px; overflow: hidden; border-radius: 20px; border: 3px solid rgba(255, 255, 255, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); position: relative;">
                 <iframe src="https://www.youtube.com/embed/o082aKyldAw?autoplay=1&mute=1&loop=1&playlist=o082aKyldAw" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 400px; height: 400px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(1.8);"></iframe>
             </div>
         </div>
