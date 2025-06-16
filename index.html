@@ -103,7 +103,8 @@
         }
 
         .navbar {
-            padding: 0.7rem 0;
+            padding-top: 12px;
+            padding-bottom: 19.2px;
         }
 
         .nav-container {
@@ -243,7 +244,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 40px; /* Tambah padding untuk desktop */
+            padding-top: 0; /* Removed padding top */
         }
 
         .hero::before {
@@ -319,24 +320,24 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            border-radius: 20px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            width: 400px;
-            height: 400px;
-            position: relative;
-        }
+            .hero-image {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                overflow: hidden;
+                border-radius: 20px;
+                border: 3px solid rgba(255, 255, 255, 0.3);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                width: 400px;
+                height: 400px;
+                position: relative;
+            }
 
 .hero-image iframe {
             position: absolute;
             top: 50%;
-            left: 0;
-            transform: translate(0, -50%) scale(1.8);
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.8);
             width: 400px;
             height: 400px;
             border-radius: 20px;
@@ -601,7 +602,7 @@
         }
 
         .testimonial-item {
-            flex: 0 0 50%; /* Adjust flex basis */
+            flex: 0 0 80%; /* Adjust flex basis for smaller width on mobile */
             margin: 0;
             padding: 2rem;
             background: #fff;
@@ -610,6 +611,71 @@
             border: 1px solid var(--warm-cream);
             min-height: 200px;
             box-sizing: border-box;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-item {
+                flex: 0 0 33.333%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .testimonial-item {
+                flex: 0 0 90%;
+            }
+        }
+
+        /* Review Pelanggan Section - make consistent with testimonials */
+        #testimonials-images {
+            padding: 6rem 0;
+            background: var(--light-cream);
+        }
+
+        #testimonials-images .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #testimonials-images .testimonials-slider {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #testimonials-images .testimonials-track {
+            display: flex;
+            gap: 1rem;
+            transition: transform 0.5s ease;
+            touch-action: pan-y;
+            user-select: none;
+        }
+
+        #testimonials-images .testimonial-item {
+            flex: 0 0 80%;
+            margin: 0;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px var(--shadow);
+            border: 1px solid var(--warm-cream);
+            min-height: 200px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            #testimonials-images .testimonial-item {
+                flex: 0 0 33.333%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #testimonials-images .testimonial-item {
+                flex: 0 0 90%;
+            }
         }
 
         .testimonials-nav {
@@ -1218,7 +1284,7 @@
                     Lihat Menu
                 </a>
             </div>
-            <div class="hero-image" style="width: 350px; height: 350px; overflow: hidden; border-radius: 20px; border: 3px solid rgba(255, 255, 255, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); position: relative;">
+<div class="hero-image" style="width: 350px; height: 350px; overflow: hidden; border-radius: 20px; border: 3px solid rgba(255, 255, 255, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); position: absolute; right: 0;">
                 <iframe src="https://www.youtube.com/embed/o082aKyldAw?autoplay=1&mute=1&loop=1&playlist=o082aKyldAw" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 400px; height: 400px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(1.8);"></iframe>
             </div>
         </div>
@@ -1949,6 +2015,61 @@
 
         // Initialize review slideshow
         updateReviewSlider();
+
+        // Swipe support for review pelanggan slider
+        let reviewStartX = 0;
+        let reviewIsDragging = false;
+
+        reviewTrack.addEventListener('touchstart', (e) => {
+            reviewStartX = e.touches[0].clientX;
+            reviewIsDragging = true;
+        });
+
+        reviewTrack.addEventListener('touchmove', (e) => {
+            if (!reviewIsDragging) return;
+            const currentX = e.touches[0].clientX;
+            const diffX = currentX - reviewStartX;
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    prevReviewSlide();
+                } else {
+                    nextReviewSlide();
+                }
+                reviewIsDragging = false;
+            }
+        });
+
+        reviewTrack.addEventListener('touchend', () => {
+            reviewIsDragging = false;
+        });
+
+        // Mouse drag support for review pelanggan slider
+        reviewTrack.addEventListener('mousedown', (e) => {
+            reviewStartX = e.clientX;
+            reviewIsDragging = true;
+        });
+
+        reviewTrack.addEventListener('mousemove', (e) => {
+            if (!reviewIsDragging) return;
+            const currentX = e.clientX;
+            const diffX = currentX - reviewStartX;
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    prevReviewSlide();
+                } else {
+                    nextReviewSlide();
+                }
+                reviewIsDragging = false;
+            }
+        });
+
+        reviewTrack.addEventListener('mouseup', () => {
+            reviewIsDragging = false;
+        });
+
+        reviewTrack.addEventListener('mouseleave', () => {
+            reviewIsDragging = false;
+        });
     </script>
 </body>
 </html>
