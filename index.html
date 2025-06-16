@@ -596,6 +596,8 @@
             display: flex;
             gap: 1rem;
             transition: transform 0.5s ease;
+            touch-action: pan-y;
+            user-select: none;
         }
 
         .testimonial-item {
@@ -1279,7 +1281,7 @@
                 <div class="menu-item">
                     <div class="menu-image">
                         <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-                        <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-beef.jpg" alt="Lasagna Beef Premium" />
+<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Beef-Premium.webp" alt="Lasagna Beef Premium" />
                         <div class="menu-badge">Terlaris!</div>
                     </div>
                     <div class="menu-content">
@@ -1298,7 +1300,7 @@
                 <div class="menu-item">
                     <div class="menu-image">
                         <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-                        <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-chicken.jpg" alt="Lasagna Chicken Spesial" />
+<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Chicken-Spesial.webp" alt="Lasagna Chicken Spesial" />
                     </div>
                     <div class="menu-content">
 <h3 class="menu-title">Lasagna Chicken Spesial</h3>
@@ -1316,7 +1318,7 @@
                 <div class="menu-item">
                     <div class="menu-image">
                         <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-                        <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-tuna.jpg" alt="Lasagna Tuna Mediterania" />
+<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Tuna-Mediterania.webp" alt="Lasagna Tuna Mediterania" />
                     </div>
                     <div class="menu-content">
 <h3 class="menu-title">Lasagna Tuna Mediterania</h3>
@@ -1334,7 +1336,7 @@
                 <div class="menu-item">
                     <div class="menu-image">
                         <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-                        <img src="https://your-wordpress-site.com/wp-content/uploads/lasagna-vegetarian.jpg" alt="Lasagna Vegetarian Garden" />
+<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Vegetarian-Garden.webp" alt="Lasagna Vegetarian Garden" />
                         <div class="menu-badge">Sehat & Lezat</div>
                     </div>
                     <div class="menu-content">
@@ -1353,7 +1355,7 @@
                 <div class="menu-item">
                     <div class="menu-image">
                         <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-                        <img src="https://your-wordpress-site.com/wp-content/uploads/fettuccine-alfredo.jpg" alt="Fettuccine Alfredo Creamy" />
+<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Fettuccine-Alfredo-Creamy.webp" alt="Fettuccine Alfredo Creamy" />
                     </div>
                     <div class="menu-content">
 <h3 class="menu-title">Fettuccine Alfredo Creamy</h3>
@@ -1370,7 +1372,7 @@
                 <div class="menu-item">
                     <div class="menu-image">
                         <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-                        <img src="https://your-wordpress-site.com/wp-content/uploads/spaghetti-bolognese.jpg" alt="Spaghetti Bolognese Klasik" />
+<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Spaghetti-Bolognese-Klasik.webp" alt="Spaghetti Bolognese Klasik" />
                     </div>
                     <div class="menu-content">
 <h3 class="menu-title">Spaghetti Bolognese Klasik</h3>
@@ -1822,6 +1824,61 @@
 
         // Initialize slider
         updateSlider();
+
+        // Swipe support for main testimonial slider
+        let startX = 0;
+        let isDragging = false;
+
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        track.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const currentX = e.touches[0].clientX;
+            const diffX = currentX - startX;
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    prevTestimonial();
+                } else {
+                    nextTestimonial();
+                }
+                isDragging = false;
+            }
+        });
+
+        track.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        // Optional: mouse drag support for desktop
+        track.addEventListener('mousedown', (e) => {
+            startX = e.clientX;
+            isDragging = true;
+        });
+
+        track.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const currentX = e.clientX;
+            const diffX = currentX - startX;
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    prevTestimonial();
+                } else {
+                    nextTestimonial();
+                }
+                isDragging = false;
+            }
+        });
+
+        track.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        track.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
 
         // About Section Slideshow
         const aboutSlides = document.querySelectorAll('.about-slideshow .slide');
