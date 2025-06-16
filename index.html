@@ -1178,42 +1178,6 @@
             }
         }
     </style>
-    <style>
-        .responsive-video {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .responsive-video {
-                width: 350px;
-                height: 350px;
-            }
-        }
-    </style>
-    <style>
-        .hero-image {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 20px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            position: relative;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 768px) {
-            .hero-image {
-                width: 350px;
-                height: 350px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -1252,8 +1216,8 @@
                     Lihat Menu
                 </a>
             </div>
-            <div class="hero-image">
-                <iframe src="https://www.youtube.com/embed/o082aKyldAw?autoplay=1&mute=1&loop=1&playlist=o082aKyldAw" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="responsive-video"></iframe>
+            <div class="hero-image" style="width: 350px; height: 350px; overflow: hidden; border-radius: 20px; border: 3px solid rgba(255, 255, 255, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); position: relative;">
+                <iframe src="https://www.youtube.com/embed/o082aKyldAw?autoplay=1&mute=1&loop=1&playlist=o082aKyldAw" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 400px; height: 400px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(1.8);"></iframe>
             </div>
         </div>
         <div class="hero-scroll-indicator">
@@ -1810,7 +1774,7 @@
 
         // Testimonials Slider
         let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial-item');
+        const testimonials = document.querySelectorAll('#testimonials .testimonial-item');
         const totalTestimonials = testimonials.length;
         const track = document.querySelector('.testimonials-track');
         const dotsContainer = document.querySelector('.testimonials-dots');
@@ -1818,6 +1782,7 @@
         const nextBtn = document.querySelector('.nav-next');
 
         // Create dots
+        dotsContainer.innerHTML = ''; // Clear existing dots before creating new ones
         for (let i = 0; i < totalTestimonials; i++) {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -1887,6 +1852,7 @@
         const reviewNextBtn = document.querySelector('#testimonials-images .nav-next');
 
         // Create dots for review slideshow
+        reviewDotsContainer.innerHTML = ''; // Clear existing dots before creating new ones
         for (let i = 0; i < reviewSlides.length; i++) {
             const dot = document.createElement('div');
             dot.classList.add('dot');
