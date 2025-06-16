@@ -90,12 +90,11 @@
             left: 0;
             right: 0;
             width: 100%;
-            height: 60px;
+            height: 25px;
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
             z-index: 10000;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 20px rgba(210, 0, 31, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         body {
@@ -103,7 +102,7 @@
         }
 
         .navbar {
-            padding: 12px 0;
+            padding: 12px 19.2px;
         }
 
         .nav-container {
@@ -113,22 +112,38 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 25px;
         }
 
         .nav-logo {
-            flex: 1;
+            flex: none;
+            display: flex;
+            align-items: center;
         }
 
         .nav-menu {
-            flex: 2;
+            flex: none;
             display: flex;
             justify-content: center;
             list-style: none;
             gap: 1.5rem;
+            margin: 0 auto;
         }
 
-        .nav-cta-btn, .hamburger {
-            flex: 1;
+        .nav-cta-btn-container {
+            flex: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 180px;
+        }
+
+        .nav-cta-btn {
+            width: 100%;
+        }
+
+        .hamburger {
+            flex: none;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -243,7 +258,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 10px; /* Reduced padding top */
+            padding-top: 25px; /* Adjusted padding top to prevent header overlap */
         }
 
         .hero::before {
@@ -1252,7 +1267,9 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <span class="logo-text">Ninna's <span class="logo-script">Recipe</span></span>
+                    <a href="#home" style="display: inline-block; border: none; padding: 0;">
+                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/ninnas-logo.webp" alt="Ninna's Recipe Logo" style="height: 40px; display: block;"/>
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Beranda</a></li>
@@ -1261,7 +1278,9 @@
                     <li><a href="#testimonials" class="nav-link">Testimoni</a></li>
                     <li><a href="#contact" class="nav-link">Kontak</a></li>
                 </ul>
-                <button class="nav-cta-btn" onclick="openModal()">Pesan Sekarang</button>
+                <div class="nav-cta-btn-container">
+                    <button class="nav-cta-btn" onclick="openModal()">Pesan Sekarang</button>
+                </div>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
