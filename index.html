@@ -42,7 +42,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px; /* Increased side padding for more space on left and right */
         }
 
         /* Color Variables - Warm Orange & Red Theme */
@@ -103,13 +103,13 @@
         }
 
             .navbar {
-                padding: 18px 12px; /* Adjusted padding to match screenshot for mobile view */
+                padding: 16px 0px; /* Updated padding as per user request */
             }
 
             .nav-container {
                 max-width: 1200px;
                 margin: 0 auto;
-                padding: 0 0px; /* Changed padding left and right to 0px for mobile views */
+                padding: 0 16px; /* Updated padding as per user request */
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start; /* Align items to top */
@@ -118,7 +118,7 @@
 
         .nav-logo {
             flex: none;
-            display: flex;
+            display: flex-end;
             align-items: center; /* Vertically center logo */
         }
 
@@ -280,8 +280,9 @@
             padding: 0 20px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem; /* Reduced gap from 4rem to 2rem */
+            gap: 3rem; /* Increased gap to add space between hero title and image */
             align-items: center;
+            justify-content: center; /* Changed from flex-end to center */
             position: relative;
             z-index: 2;
         }
@@ -316,6 +317,7 @@
 
         .hero-content {
             color: white;
+            max-width: 600px; /* Added to widen the hero text area */
         }
 
         .hero-title {
@@ -366,7 +368,7 @@
 
             .hero-image {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: flex-start; /* Changed to align image left */
                 align-items: center;
                 overflow: hidden;
                 border-radius: 20px;
@@ -710,14 +712,32 @@
             user-select: none;
         }
 
+        @media (min-width: 1025px) {
+            #testimonials-images .testimonial-item {
+                flex: 0 0 25%; /* 4 items per row on desktop */
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 601px) {
+            #testimonials-images .testimonial-item {
+                flex: 0 0 50%; /* 2 items per row on tablet */
+            }
+        }
+
+        @media (max-width: 600px) {
+            #testimonials-images .testimonial-item {
+                flex: 0 0 100%; /* 1 item per row on mobile */
+            }
+        }
+
         #testimonials-images .testimonial-item {
             flex: 0 0 80%;
             margin: 0;
-            padding: 2rem;
+            padding: 0; /* Removed all padding as requested */
             background: #fff;
             border-radius: 20px;
             box-shadow: 0 15px 35px var(--shadow);
-            border: 1px solid var(--warm-cream);
+            /* Removed border as requested */
             min-height: 200px;
             box-sizing: border-box;
             display: flex;
@@ -1655,19 +1675,19 @@
             <div class="testimonials-slider">
                 <div class="testimonials-track">
                     <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi1.webp" alt="Testimonial 1" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px;" />
+                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi1.webp" alt="Testimonial 1" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
                     </div>
                     <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi2.webp" alt="Testimonial 2" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px;" />
+                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi2.webp" alt="Testimonial 2" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
                     </div>
                     <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi3.webp" alt="Testimonial 3" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px;" />
+                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi3.webp" alt="Testimonial 3" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
                     </div>
                     <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi4.webp" alt="Testimonial 4" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px;" />
+                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi4.webp" alt="Testimonial 4" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
                     </div>
                     <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi5.webp" alt="Testimonial 5" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px;" />
+                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi5.webp" alt="Testimonial 5" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
                     </div>
                 </div>
                 <div class="testimonials-nav">
