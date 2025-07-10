@@ -1,2164 +1,745 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ninna's Recipe - Kelezatan Warisan Keluarga yang Tak Terlupakan</title>
-    <meta name="description" content="Lasagna Premium Buatan Rumah sejak 2001.x Rasakan kehangatan cinta keluarga dalam setiap suapan. Pesan sekarang dan nikmati kelezatan yang tak terlupakan!">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ninna's Recipe - Beef Lasagna with Chili Pickles</title>
     <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            width: 100vw;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #2D1810;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px; /* Increased side padding for more space on left and right */
-        }
-
-        /* Color Variables - Warm Orange & Red Theme */
-        :root {
-            --primary-orange: #FF6B35;
-            --secondary-orange: #FF8C42;
-            --accent-red: #D2001F;
-            --deep-red: #B91C1C;
-            --warm-cream: #F5E6D3;
-            --light-cream: #FDF6F0;
-            --brown-dark: #8B4513;
-            --brown-text: #2D1810;
-            --white: #FFFFFF;
-            --shadow: rgba(210, 0, 31, 0.15);
-            --whatsapp-green: #25D366;
-            --tokopedia-green: #42B549;
-            --shopee-orange: #EE4D2D;
-            --gofood-green: #00AA13;
-            --grab-green: #00B14F;
-        }
-
-        /* Typography */
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--brown-text);
-            text-align: center;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .section-subtitle {
-            font-size: 1rem;
-            color: var(--accent-red);
-            text-align: center;
-            margin-bottom: 2.5rem;
-            font-weight: 500;
-        }
-
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 70px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 10000;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 20px rgba(210, 0, 31, 0.1);
-        }
-
-        body {
-            padding-top: 60px; /* To prevent content hidden behind fixed header */
-        }
-
-            .navbar {
-                padding: 16px 0px; /* Updated padding as per user request */
-            }
-
-            .nav-container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 0 16px; /* Updated padding as per user request */
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start; /* Align items to top */
-                height: 60px; /* Ensure container height */
-            }
-
-        .nav-logo {
-            flex: none;
-            display: flex-end;
-            align-items: center; /* Vertically center logo */
-        }
-
-        .nav-menu {
-            flex: none;
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            gap: 1.5rem;
-            margin: 0 auto;
-            align-items: center; /* Vertically center menu items */
-        }
-
-        .nav-cta-btn-container {
-            flex: none;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center; /* Vertically center CTA button */
-            width: 180px;
-        }
-
-        .nav-cta-btn {
-            width: 100%;
-        }
-
-        .hamburger {
-            flex: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-logo .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--brown-text);
-        }
-
-        .logo-script {
-            font-family: 'Dancing Script', cursive;
-            color: var(--primary-orange);
-            font-size: 1.1rem;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--brown-text);
-            font-weight: 500;
-            font-size: 0.75rem;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        @media (min-width: 768px) {
-            .navbar {
-                padding: 1.2rem 0;
-            }
-
-            .nav-link {
-                font-size: 0.9rem;
-            }
-
-            .nav-logo .logo-text {
-                font-size: 1.3rem;
-            }
-
-            .logo-script {
-                font-size: 1.3rem;
-            }
-
-            .nav-cta-btn {
-                width: 180px;
-                height: 35px;
-                font-size: 0.9rem;
-            }
-        }
-
-        .nav-link:hover {
-            color: var(--primary-orange);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: var(--primary-orange);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta-btn {
-            background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
-            color: white;
-            border: none;
-            width: 150px;
-            height: 30px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .bar {
-            width: 25px;
-            height: 3px;
-            background: var(--brown-text);
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-red) 100%);
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 60px; /* Added padding top to create space between header and hero */
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem; /* Increased gap to add space between hero title and image */
-            align-items: center;
-            justify-content: center; /* Changed from flex-end to center */
-            position: relative;
-            z-index: 2;
-        }
-        @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 1rem; /* Reduced gap from 2rem to 1rem */
-                padding: 0 15px;
-                text-align: center;
-            }
-            .hero-image {
-                width: 100%;
-                max-width: 400px;
-                height: auto;
-                margin: 0 auto;
-                border-radius: 20px;
-                border: 3px solid rgba(255, 255, 255, 0.3);
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-                overflow: hidden;
-            }
-            .hero-image iframe {
-                position: relative;
-                width: 100%;
-                height: 300px;
-                max-width: 100%;
-                max-height: 100%;
-                transform: none;
-                border-radius: 20px;
-                display: block;
-            }
-        }
-
-        .hero-content {
-            color: white;
-            max-width: 600px; /* Added to widen the hero text area */
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-subtitle {
-            font-size: 2.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            opacity: 0.95;
-            color: #FDF6F0;
-        }
-
-        .hero-description {
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        .hero-cta-btn {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .hero-cta-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-            .hero-image {
-                display: flex;
-                justify-content: flex-start; /* Changed to align image left */
-                align-items: center;
-                overflow: hidden;
-                border-radius: 20px;
-                border: 3px solid rgba(255, 255, 255, 0.3);
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-                width: 900px; /* Further increased width */
-                max-width: 900px; /* Further increased max-width */
-                height: auto;
-                position: relative;
-            }
-
-.hero-image iframe {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(0, -50%) scale(1.8);
-            width: 100%;
-            max-width: 900px; /* Further increased max-width */
-            height: auto;
-            border-radius: 20px;
-        }
-
-
-        @media (max-width: 768px) {
-            .hero-image {
-                width: 350px;
-                height: 350px;
-                border-radius: 20px;
-                border: 3px solid rgba(255, 255, 255, 0.3);
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-                overflow: hidden;
-                padding: 0;
-                margin: 0 auto;
-            }
-
-            .hero-image iframe {
-                position: relative;
-                width: 350px;
-                height: 350px;
-                max-width: 100%;
-                max-height: 100%;
-                transform: none;
-                border-radius: 20px;
-                display: block;
-            }
-        }
-
-        .hero-scroll-indicator {
-            position: absolute;
-            bottom: 4rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 1.5rem;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
-        }
-
-        /* About Section */
-        .about {
-            padding: 6rem 0;
-            background: var(--light-cream);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            padding-right: 2rem;
-        }
-
-        .about-highlight {
-            margin-bottom: 1.5rem;
-        }
-
-        .highlight-text {
-            background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
-
-        .about-description {
-            font-size: 14.4px;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: var(--brown-text);
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-orange);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--brown-text);
-            font-weight: 500;
-            font-size: 0.85rem;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.3);
-        }
-
-        /* Menu Section */
-        .menu {
-            padding: 6rem 0;
-            background: white;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-        @media (max-width: 1024px) {
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-        }
-        @media (max-width: 600px) {
-            .menu-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-        }
-
-        .menu-item {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px var(--shadow);
-            transition: all 0.3s ease;
-            border: 1px solid var(--warm-cream);
-        }
-
-        .menu-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(210, 0, 31, 0.2);
-        }
-
-        .menu-image {
-            position: relative;
-            height: 160px;
-            overflow: hidden;
-        }
-
-        .menu-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .menu-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--accent-red);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            box-shadow: 0 4px 10px rgba(210, 0, 31, 0.3);
-        }
-
-        .menu-content {
-            padding: 1.2rem;
-        }
-
-        .menu-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--brown-text);
-            margin-bottom: 0.5rem;
-        }
-
-        .menu-description {
-            color: #666;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-            font-size: 0.9rem;
-        }
-
-        .menu-sizes {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .size-option {
-            background: var(--warm-cream);
-            padding: 0.6rem 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--brown-text);
-            border: 1px solid var(--primary-orange);
-        }
-
-        .menu-order-btn {
-            width: 100%;
-            background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
-            color: white;
-            border: none;
-            padding: 0.8rem;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        }
-
-        .menu-order-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 6rem 0;
-            background: var(--light-cream);
-        }
-
-        .testimonials .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonials-slider {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .testimonials-track {
-            display: flex;
-            gap: 1rem;
-            transition: transform 0.5s ease;
-            touch-action: pan-y;
-            user-select: none;
-        }
-
-        .testimonial-item {
-            flex: 0 0 80%; /* Adjust flex basis for smaller width on mobile */
-            margin: 0;
-            padding: 2rem;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px var(--shadow);
-            border: 1px solid var(--warm-cream);
-            min-height: 200px;
-            box-sizing: border-box;
-        }
-
-        @media (min-width: 768px) {
-            .testimonial-item {
-                flex: 0 0 33.333%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .testimonial-item {
-                flex: 0 0 90%;
-            }
-        }
-
-        /* Review Pelanggan Section - make consistent with testimonials */
-        #testimonials-images {
-            padding: 6rem 0;
-            background: var(--light-cream);
-        }
-
-        #testimonials-images .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        #testimonials-images .testimonials-slider {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        #testimonials-images .testimonials-track {
-            display: flex;
-            gap: 1rem;
-            transition: transform 0.5s ease;
-            touch-action: pan-y;
-            user-select: none;
-        }
-
-        @media (min-width: 1025px) {
-            #testimonials-images .testimonial-item {
-                flex: 0 0 25%; /* 4 items per row on desktop */
-            }
-        }
-
-        @media (max-width: 1024px) and (min-width: 601px) {
-            #testimonials-images .testimonial-item {
-                flex: 0 0 50%; /* 2 items per row on tablet */
-            }
-        }
-
-        @media (max-width: 600px) {
-            #testimonials-images .testimonial-item {
-                flex: 0 0 100%; /* 1 item per row on mobile */
-            }
-        }
-
-        #testimonials-images .testimonial-item {
-            flex: 0 0 80%;
-            margin: 0;
-            padding: 0; /* Removed all padding as requested */
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px var(--shadow);
-            /* Removed border as requested */
-            min-height: 200px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        @media (min-width: 768px) {
-            #testimonials-images .testimonial-item {
-                flex: 0 0 33.333%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            #testimonials-images .testimonial-item {
-                flex: 0 0 90%;
-            }
-        }
-
-        .testimonials-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .nav-prev, .nav-next {
-            background: var(--primary-orange);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .nav-prev:hover, .nav-next:hover {
-            background: var(--accent-red);
-            transform: translateY(-2px);
-        }
-
-        .testimonials-dots {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--warm-cream);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .dot.active {
-            background: var(--primary-orange);
-            transform: scale(1.2);
-        }
-
-        .stars {
-            color: var(--secondary-orange);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            color: var(--brown-text);
-            font-size: 1.05rem;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 55px;
-            height: 55px;
-            background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        .author-name {
-            font-weight: 600;
-            color: var(--brown-text);
-            font-size: 1.05rem;
-        }
-
-        .author-location {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 0;
-            background: white;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        @media (max-width: 768px) {
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .contact-item i {
-            width: 55px;
-            height: 55px;
-            background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.3rem;
-        }
-
-        .contact-item h4 {
-            font-weight: 600;
-            color: var(--brown-text);
-            margin-bottom: 0.25rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-item p {
-            color: #666;
-            font-size: 0.85rem;
-        }
-
-        .contact-cta {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: var(--warm-cream);
-            border-radius: 25px;
-            border: 2px solid var(--primary-orange);
-        }
-
-        .contact-cta h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: var(--brown-text);
-            margin-bottom: 1rem;
-        }
-
-        .contact-cta p {
-            color: var(--brown-text);
-            margin-bottom: 1.2rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-cta-btn {
-            background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
-            color: white;
-            border: none;
-            padding: 1.2rem 2.5rem;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 1.05rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        }
-
-        .contact-cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--brown-text);
-            color: white;
-            padding: 3rem 0 1rem;
-            font-size: 0.85rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-section h3 {
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 1rem;
-            color: var(--primary-orange);
-            font-size: 1.1rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            margin-bottom: 0.6rem;
-            display: block;
-            transition: color 0.3s ease;
-            font-size: 0.85rem;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary-orange);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #444;
-            padding-top: 1rem;
-            text-align: center;
-            color: #999;
-            font-size: 0.75rem;
-        }
-
-        /* Modal/Popup Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 3% auto;
-            padding: 0;
-            border-radius: 25px;
-            width: 90%;
-            max-width: 450px;
-            position: relative;
-            animation: modalSlideIn 0.3s ease-out;
-            overflow: hidden;
-            box-shadow: 0 25px 50px rgba(210, 0, 31, 0.3);
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .modal-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .modal-header p {
-            opacity: 0.9;
-            font-size: 0.9rem;
-        }
-
-        .close {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-
-        .close:hover {
-            opacity: 0.7;
-        }
-
-        .modal-body {
-            padding: 1.5rem;
-        }
-
-        .order-buttons {
-            display: grid;
-            gap: 0.6rem;
-        }
-
-        .order-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            padding: 0.6rem 1rem;
-            border: none;
-            border-radius: 18px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 480px) {
-            .order-btn {
-                font-size: 0.5rem;
-            }
-        }
-
-        .order-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .order-btn i {
-            font-size: 1.6rem;
-        }
-
-        .btn-whatsapp {
-            background: var(--whatsapp-green);
-        }
-
-        .btn-location {
-            background: #4285F4;
-        }
-
-        .btn-tokopedia {
-            background: var(--tokopedia-green);
-        }
-
-        .btn-shopee {
-            background: var(--shopee-orange);
-        }
-
-        .btn-gofood {
-            background: var(--gofood-green);
-        }
-
-        .btn-shopeefood {
-            background: var(--shopee-orange);
-        }
-
-        .btn-grabfood {
-            background: var(--grab-green);
-        }
-
-        .btn-coming-soon {
-            background: #6c757d;
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-
-        .btn-coming-soon:hover {
-            transform: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-.modal-footer {
-    background: var(--warm-cream);
-    padding: 2rem;
-    text-align: center;
-    border-top: 1px solid #eee;
-}
-
-        .modal-footer h4 {
-            color: var(--brown-text);
-            margin-bottom: 1.2rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-.delivery-partners {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem; /* Reduce the gap even further */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    font-size: 1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .hero {
-                padding-top: 30px;
-                min-height: 70vh;
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                text-align: center;
-                padding: 2rem 15px;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-                margin-top: 0;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .hero-description {
-                font-size: 0.85rem;
-            }
-
-            .hero-image img {
-                width: 280px;
-                height: 280px;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .about-text {
-                padding-right: 0;
-            }
-
-            .about-stats {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .nav-container {
-                padding: 0 1rem;
-            }
-
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 60px;
-                flex-direction: column;
-                background-color: white;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-                padding: 1rem 0;
-                flex: none;
-                justify-content: center;
-            }
-
-            .nav-logo,
-            .nav-cta-btn,
-            .hamburger {
-                flex: none;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .section-subtitle {
-                font-size: 0.9rem;
-            }
-
-            .modal-content {
-                margin: 10% auto;
-                width: 90%;
-            }
-
-            .modal-header {
-                padding: 1.5rem;
-            }
-
-            .modal-header h2 {
-                font-size: 1.4rem;
-            }
-
-            .modal-header p {
-                font-size: 0.9rem;
-            }
-
-            .modal-body {
-                padding: 1.5rem;
-            }
-
-            .order-btn {
-                padding: 0.8rem 1rem;
-                font-size: 0.9rem;
-            }
-
-            .delivery-partners {
-                gap: 0.5rem;
-            }
-
-            .delivery-partner {
-                padding: 0.3rem 0.6rem;
-                font-size: 0.7rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2.6rem;
-            }
-
-            .hero-image img {
-                width: 200px;
-                height: 200px;
-            }
-
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .testimonial-item {
-                flex: 0 0 33.333%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .testimonial-item {
-                flex: 0 0 100%;
-            }
-        }
+      /* Updated color palette and fonts for FNB landing page */
+      /* Motion animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .hero h1 {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      .hero p.subheadline {
+        animation: fadeInUp 0.8s ease-out 0.2s both;
+      }
+
+      .features {
+        animation: scaleIn 0.8s ease-out;
+      }
+
+      .features li {
+        animation: slideInLeft 0.5s ease-out;
+        animation-fill-mode: both;
+      }
+
+      .features li:nth-child(1) { animation-delay: 0.1s; }
+      .features li:nth-child(2) { animation-delay: 0.2s; }
+      .features li:nth-child(3) { animation-delay: 0.3s; }
+      .features li:nth-child(4) { animation-delay: 0.4s; }
+      .features li:nth-child(5) { animation-delay: 0.5s; }
+
+      .offer {
+        animation: scaleIn 0.8s ease-out;
+      }
+
+      .whatsapp-promo a {
+        animation: pulse 2s infinite;
+      }
+
+      .section-divider {
+        animation: scaleIn 1s ease-out;
+      }
+
+      img {
+        transition: transform 0.3s ease;
+      }
+
+      img:hover {
+        transform: scale(1.02);
+      }
+      /* Food-themed decorative elements */
+      .food-pattern {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4l-2-2V24v-2l2-2V14l-2-2v-2l2-2V4h-4l-2 2v2l2 2v6l-2 2v2l2 2v4l-2 2v2l2 2v6l-4 4v2l2 2v4h4l2-2v-4l-2-2v-2l4-4v-6l-2-2v-2l2-2zm0 0v4l2 2v4h4l2-2v-4l-2-2v-2l4-4v-6l-2-2v-2l2-2V14l-2-2v-2l2-2V4h-4l-2 2v2l2 2v6l-2 2v2l2 2v4l-2 2v2l2 2v6'/%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.1;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .corner-decor {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        opacity: 0.2;
+      }
+
+      .corner-decor::before {
+        content: "🍝";
+        font-size: 40px;
+        position: absolute;
+      }
+
+      .corner-decor.top-left {
+        top: 10px;
+        left: 10px;
+        transform: rotate(-45deg);
+      }
+
+      .corner-decor.top-right {
+        top: 10px;
+        right: 10px;
+        transform: rotate(45deg);
+      }
+
+      .corner-decor.bottom-left {
+        bottom: 10px;
+        left: 10px;
+        transform: rotate(-135deg);
+      }
+
+      .corner-decor.bottom-right {
+        bottom: 10px;
+        right: 10px;
+        transform: rotate(135deg);
+      }
+
+      .section-divider {
+        height: 30px;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23f08a5d' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        margin: 2rem 0;
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+
+      .floating-emoji {
+        position: absolute;
+        font-size: 24px;
+        animation: float 3s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      .floating-emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
+      .floating-emoji:nth-child(2) { left: 30%; animation-delay: 0.5s; }
+      .floating-emoji:nth-child(3) { right: 30%; animation-delay: 1s; }
+      .floating-emoji:nth-child(4) { right: 10%; animation-delay: 1.5s; }
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap');
+
+      :root {
+        --peach: #f4a261;
+        --orange: #e76f51;
+        --green-ribbon: #6b8e23;
+        --background-gradient-start: #f9cda7; /* lighter peach */
+        --background-gradient-end: #f08a5d; /* warm orange */
+        --white: #fff;
+        --dark-text: #3b2f2f; /* dark brown */
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(180deg, var(--background-gradient-start), var(--background-gradient-end));
+        color: var(--dark-text);
+        line-height: 1.6;
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 177.78%;
+        height: 0;
+        overflow: hidden;
+        max-width: 405px;
+        margin: 15px auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .video-wrapper {
+        margin: 15px;
+      }
+
+      @media (max-width: 480px) {
+        .video-container {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .video-container {
+          padding-bottom: 140% !important;
+        }
+      }
+
+    header {
+      display: block;
+      padding: 0.5rem 1rem;
+      background: #ffffff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      /* Removed box-shadow for no border */
+      height: auto;
+    }
+
+    header .logo {
+      font-family: 'Roboto Slab', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      /* Removed border and padding for logo */
+      user-select: none;
+      max-width: 150px;
+    }
+
+    header .whatsapp-promo a {
+      color: #fff;
+      text-decoration: none;
+      background-color: #25D366; /* WhatsApp green */
+      padding: 0.3rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(37, 211, 102, 0.4);
+      transition: background-color 0.3s ease;
+      max-width: 180px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    header .whatsapp-promo a:hover {
+      background-color: #000000; /* black */
+      color: #fff;
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+      header {
+        padding: 1rem 2rem;
+      }
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+      color: var(--dark-text);
+    }
+
+    .hero p.subheadline {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      color: var(--dark-text);
+    }
+
+    .photo-section {
+      position: relative;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .photo-section img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Simple hand-drawn doodles using CSS shapes */
+    .doodle {
+      position: absolute;
+      border: 2px dashed var(--white);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: doodle-pulse 3s infinite alternate;
+    }
+
+    .doodle1 {
+      width: 80px;
+      height: 80px;
+      top: 10%;
+      left: 10%;
+      transform: rotate(-15deg);
+    }
+
+    .doodle2 {
+      width: 60px;
+      height: 60px;
+      bottom: 15%;
+      right: 15%;
+      transform: rotate(20deg);
+    }
+
+    @keyframes doodle-pulse {
+      0% {
+        opacity: 0.6;
+        transform: scale(1) rotate(var(--rotate, 0deg));
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1.1) rotate(var(--rotate, 0deg));
+      }
+    }
+
+    .video-section {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    @media (min-width: 769px) {
+      .video-section iframe {
+        height: 800px !important;
+      }
+    }
+
+    .features {
+      background: var(--white);
+      color: var(--dark-text);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .features h2 {
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var(--background-gradient-end);
+    }
+
+    .features ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .features ul li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .features ul li::before {
+      content: "👍";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--background-gradient-end);
+      font-weight: 900;
+    }
+
+    .offer {
+      background: var(--peach);
+      color: var(--dark-text);
+      border-radius: 12px;
+      padding: 2rem 2rem;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .offer h2 {
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--background-gradient-end);
+      text-align: center;
+    }
+
+    .offer ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .offer ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .offer ul li span {
+      font-weight: 900;
+      color: var(--background-gradient-end);
+    }
+
+    .offer p.promo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 1rem;
+      color: var(--background-gradient-end);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .video-section iframe {
+        height: 240px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      body {
+        font-size: 16px;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p.subheadline {
+        font-size: 1.2rem;
+      }
+    }
     </style>
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="#home">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/ninnas-logo.webp" alt="Ninna's Recipe Logo" style="height: 40px;"/>
-                    </a>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Beranda</a></li>
-                    <li><a href="#about" class="nav-link">Tentang Kami</a></li>
-                    <li><a href="#menu" class="nav-link">Menu</a></li>
-                    <li><a href="#testimonials" class="nav-link">Testimoni</a></li>
-                    <li><a href="#contact" class="nav-link">Kontak</a></li>
-                </ul>
-                <div class="nav-cta-btn-container">
-                    <button class="nav-cta-btn" onclick="openModal()">Pesan Sekarang</button>
-                </div>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
+  </head>
+  <body>
+    <header>
+      <div class="header-container" style="max-width: 700px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 70px;">
+        <div class="logo" style="display:flex; align-items:center; height: 70px;">
+          <img src="https://ninnasrecipe.com/wp-content/uploads/2025/06/ninnas-logo.webp" alt="Ninna's Recipe Logo" style="height: 40px; margin: auto 0;" />
+        </div>
+        <div class="whatsapp-promo" style="display:flex; align-items:center; height: 70px;">
+<a href="https://mauorder.online/ninnas-recipe" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; height: 40px; font-size: 0.7rem; padding: 0 1rem;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;" />
+            PESAN SEKARANG
+          </a>
+        </div>
+      </div>
+
+      <style>
+        @media (min-width: 769px) {
+          .header-container {
+            height: 50px !important;
+          }
+          .header-container .logo {
+            height: 50px !important;
+          }
+          .header-container .whatsapp-promo {
+            height: 50px !important;
+          }
+          .header-container .whatsapp-promo a {
+            height: 30px !important;
+          }
+        }
+      </style>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero" style="padding-top: 25px;">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Kelezatan yang Tak Pernah Tergantikan</h1>
-                <p class="hero-subtitle">Premium Lasagna with #TasteofMemories</p>
-                <p class="hero-description">Resep turun-temurun yang menyajikan cita rasa tak pernah tergantikan disetiap suapannya sejak 2001. Perpaduan sempurna antara daging sapi pilihan, keju mozarella premium, dengan saus tomat buatan sendiri yang menghadirkan rasa seperti di rumah.</p>
-                <a href="#menu" class="hero-cta-btn">
-                    <i class="fas fa-utensils"></i>
-                    Lihat Menu
-                </a>
-            </div>
-            <div class="hero-image" style="width: 350px; height: 548px; overflow: hidden; border-radius: 20px; border: 3px solid rgba(255, 255, 255, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); position: relative;">
-                <iframe src="https://www.youtube.com/embed/o082aKyldAw?autoplay=1&mute=1&loop=1&playlist=o082aKyldAw" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 400px; height: 400px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(1.8);"></iframe>
-            </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
+  <main>
+    <section class="hero">
+      <h1 style="font-size: 2.3rem;">Lasagna Medok, Super Creamy, dan Lumer di Mulut!</h1>
+      <p class="subheadline" style="font-weight: normal; color: #d35400;">Makin special dengan chilli pickles pedas segar, bikin nagih. Sensasi makan Lasagna yang beda dari yang lain</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-<h2 class="section-title">Cita Rasa yang Istimewa</h2>
-            <p class="section-subtitle">Generational Delicacy in Every Bite</p>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-highlight">
-                        <p class="highlight-text">Menyimpan Rasa Sejak 2001</p>
-                    </div>
-                    <p class="about-description">
-                        Ninna's Recipe lahir dari dapur kecil keluarga dengan mimpi besar - berbagi kelezatan autentik buatan rumah kepada dunia. Apa yang dimulai sebagai resep rahasia nenek Ninna kini telah menjadi tradisi kuliner yang dicintai ribuan keluarga Indonesia.
-                    </p>
-                    <p class="about-description">
-                        Setiap hidangan yang kami ciptakan membawa kehangatan tradisi keluarga, menggunakan bahan-bahan pilihan terbaik dan metode memasak yang telah teruji waktu. Lasagna signature kami bukan sekadar makanan - ini adalah sepotong hati keluarga kami yang disajikan di piring Anda. Dengan setiap gigitan, Anda akan merasakan kelezatan yang sama seperti yang kami rasakan di meja makan keluarga.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">23+</div>
-                            <div class="stat-label">Tahun Pengalaman</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">15K+</div>
-                            <div class="stat-label">Pelanggan Puas</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Buatan Rumah</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="about-slideshow">
-                        <div class="slide active">
-                            <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/cover-about.webp" alt="Dapur Keluarga Ninna 1" style="width: 100%; height: 450px; object-fit: cover; border-radius: 20px; box-shadow: 0 15px 35px rgba(255, 107, 53, 0.3);" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Removed arrow image below hero section as requested -->
+
+    <section class="photo-section" style="background: white; border-radius: 12px; max-width: 700px; margin: 0 auto 2rem;">
+      <div class="doodle doodle1" style="--rotate:-15deg;"></div>
+      <div class="doodle doodle2" style="--rotate:20deg;"></div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu">
-        <div class="container">
-            <h2 class="section-title">Our Premium Signature Dish</h2>
-            <p class="section-subtitle">Rasa Berkelas, Disajikan penuh Kualitas.</p>
-            
-            <div class="menu-grid">
-                <!-- Lasagna Beef -->
-                <div class="menu-item">
-                    <div class="menu-image">
-                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Beef-Premium.webp" alt="Lasagna Beef Premium" />
-                        <div class="menu-badge">Terlaris!</div>
-                    </div>
-                    <div class="menu-content">
-<h3 class="menu-title">Lasagna Beef Premium</h3>
-                        <p class="menu-description">Daging sapi pilihan yang dipadukan dengan keju mozarella dan siraman saus tomat buatan rumah, menghadirkan rasa lembut yang menggugah selera!</p>
-                        <div class="menu-sizes">
-                            <div class="size-option">Personal (1-2 porsi) - Rp 85.000</div>
-                            <div class="size-option">Medium (3-4 porsi) - Rp 150.000</div>
-                            <div class="size-option">Large (5-6 porsi) - Rp 200.000</div>
-                        </div>
-                        <button class="menu-order-btn" onclick="openModal()">Pesan Sekarang!</button>
-                    </div>
-                </div>
-
-                <!-- Lasagna Chicken -->
-                <div class="menu-item">
-                    <div class="menu-image">
-                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Chicken-Spesial.webp" alt="Lasagna Chicken Spesial" />
-                    </div>
-                    <div class="menu-content">
-<h3 class="menu-title">Lasagna Chicken Spesial</h3>
-                        <p class="menu-description">Daging dada ayam pilihan yang dimasak dengan rempah berkualitas, dipadukan dengan pasta dan krim keju, menawarkan rasa yang tak pernah terlupakan!</p>
-                        <div class="menu-sizes">
-                            <div class="size-option">Personal (1-2 porsi) - Rp 80.000</div>
-                            <div class="size-option">Medium (3-4 porsi) - Rp 140.000</div>
-                            <div class="size-option">Large (5-6 porsi) - Rp 185.000</div>
-                        </div>
-                        <button class="menu-order-btn" onclick="openModal()">Pesan Sekarang!</button>
-                    </div>
-                </div>
-
-                <!-- Lasagna Tuna -->
-                <div class="menu-item">
-                    <div class="menu-image">
-                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Tuna-Mediterania.webp" alt="Lasagna Tuna Mediterania" />
-                    </div>
-                    <div class="menu-content">
-<h3 class="menu-title">Lasagna Tuna Mediterania</h3>
-                        <p class="menu-description">Daging tuna dengan cita rasa mediterania yang dipadukan dengan saus krim kaya rasa, membawakan pengalaman kuliner seperti di Eropa!</p>
-                        <div class="menu-sizes">
-                            <div class="size-option">Personal (1-2 porsi) - Rp 75.000</div>
-                            <div class="size-option">Medium (3-4 porsi) - Rp 135.000</div>
-                            <div class="size-option">Large (5-6 porsi) - Rp 180.000</div>
-                        </div>
-                        <button class="menu-order-btn" onclick="openModal()">Pesan Sekarang!</button>
-                    </div>
-                </div>
-
-                <!-- Lasagna Vegetarian -->
-                <div class="menu-item">
-                    <div class="menu-image">
-                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Vegetarian-Garden.webp" alt="Lasagna Vegetarian Garden" />
-                        <div class="menu-badge">Sehat & Lezat</div>
-                    </div>
-                    <div class="menu-content">
-<h3 class="menu-title">Lasagna Vegetarian Garden</h3>
-                        <p class="menu-description">Sayur segar pilihan yang dipadukan dengan Ricotta Cheese dan Mozarella Cheese, menawarkan nutrisi yang bergizi dibalik kelezatan yang memuaskan!</p>
-                        <div class="menu-sizes">
-                            <div class="size-option">Personal (1-2 porsi) - Rp 70.000</div>
-                            <div class="size-option">Medium (3-4 porsi) - Rp 125.000</div>
-                            <div class="size-option">Large (5-6 porsi) - Rp 170.000</div>
-                        </div>
-                        <button class="menu-order-btn" onclick="openModal()">Pesan Sekarang!</button>
-                    </div>
-                </div>
-
-                <!-- Fettuccine Alfredo -->
-                <div class="menu-item">
-                    <div class="menu-image">
-                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Fettuccine-Alfredo-Creamy.webp" alt="Fettuccine Alfredo Creamy" />
-                    </div>
-                    <div class="menu-content">
-<h3 class="menu-title">Fettuccine Alfredo Creamy</h3>
-                        <p class="menu-description">Paduan Fettuccini yang dimasak al dente dengan saus parmesan yang creamy dan lembut, menawarkan kenikmatan yang memanjakan lidah!</p>
-                        <div class="menu-sizes">
-                            <div class="size-option">Regular - Rp 65.000</div>
-                            <div class="size-option">Large - Rp 85.000</div>
-                        </div>
-                        <button class="menu-order-btn" onclick="openModal()">Pesan Sekarang!</button>
-                    </div>
-                </div>
-
-                <!-- Spaghetti Bolognese -->
-                <div class="menu-item">
-                    <div class="menu-image">
-                        <!-- GANTI URL GAMBAR INI SETELAH UPLOAD KE WORDPRESS -->
-<img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Spaghetti-Bolognese-Klasik.webp" alt="Spaghetti Bolognese Klasik" />
-                    </div>
-                    <div class="menu-content">
-<h3 class="menu-title">Spaghetti Bolognese Klasik</h3>
-                        <p class="menu-description">Spaghetti yang dimasak al dente dipadukan dengan saus daging klasik khas Italia yang dimasak hingga sempurna, menawarkan cita rasa autentik Negeri Pasta.</p>
-                        <div class="menu-sizes">
-                            <div class="size-option">Regular - Rp 60.000</div>
-                            <div class="size-option">Large - Rp 80.000</div>
-                        </div>
-                        <button class="menu-order-btn" onclick="openModal()">Pesan Sekarang!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="features" style="text-align: center;">
+    <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/Lasagna-Tuna-Mediterania.webp" alt="Lasagna Tuna Mediterania" loading="lazy" style="width: 300px; height: 300px; object-fit: cover; border-radius: 0; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 1rem; display: inline-block;"/>
+      <ul style="padding-left: 1.2rem; color: #3b2f2f; font-weight: 600; font-size: 0.9rem; list-style: none; text-align: left; display: inline-block;">
+        <li>Bahan Premium dengan daging pilihan, keju melimpah dan saus homemade</li>
+        <li>Tanpa Bahan Pengawet</li>
+        <li>Terjaga Kebersihannya karena 100% Homemade</li>
+        <li>Harga Lebih Terjangkau</li>
+        <li>Dibuat Fresh by Request</li>
+      </ul>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Kata Mereka Tentang Ninna's Recipe </h2>
-            <p class="section-subtitle">Proven by Our Happy Customers</p>
-            
-            <div class="testimonials-slider">
-                <div class="testimonials-track">
-                    <div class="testimonial-item">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"MasyaAllah, lasagna beef-nya benar-benar luar biasa! Rasanya seperti buatan mama sendiri, keju-nya melimpah dan dagingnya empuk banget. Anak-anak sampai minta tambah terus. Pokoknya jadi langganan deh!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">S</div>
-                            <div>
-                                <div class="author-name">Sarah Wijaya</div>
-                                <div class="author-location">Jakarta Selatan</div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="testimonial-item">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Packaging-nya rapi banget, rasa autentik kayak di restoran Italia mahal, tapi harganya sangat terjangkau. Ninna's Recipe emang the best untuk comfort food keluarga. Recommended banget!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">R</div>
-                            <div>
-                                <div class="author-name">Rizki Pratama</div>
-                                <div class="author-location">Tangerang</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Sudah order berkali-kali dan selalu konsisten rasanya. Lasagna beef-nya juara banget, cheese-nya melimpah dan pasta-nya perfectly cooked. Suami dan anak-anak selalu excited kalau ada Ninna's Recipe!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">M</div>
-                            <div>
-                                <div class="author-name">Maya Sari</div>
-                                <div class="author-location">Bekasi</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Pertama kali coba langsung jatuh cinta! Lasagna vegetarian-nya luar biasa enak, ga nyangka makanan vegetarian bisa seenak ini. Porsinya juga pas banget untuk keluarga. Thank you Ninna's Recipe!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">L</div>
-                            <div>
-                                <div class="author-name">Linda Kusuma</div>
-                                <div class="author-location">Depok</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Saya pecinta pasta dan lasagna, dan bisa dibilang Ninna's Recipe ini top markotop! Bumbunya pas, kejunya premium, dan yang paling penting konsisten tiap order. Worth every penny!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">A</div>
-                            <div>
-                                <div class="author-name">Andi Putra</div>
-                                <div class="author-location">BSD</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Selalu jadi andalan untuk acara keluarga. Pelayanannya ramah, pengirimannya tepat waktu, dan yang pasti rasanya selalu bikin ketagihan. The best homemade lasagna in town!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">D</div>
-                            <div>
-                                <div class="author-name">Dewi Anggraini</div>
-                                <div class="author-location">Jakarta Barat</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials-nav">
-                    <button class="nav-prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="testimonials-dots"></div>
-                    <button class="nav-next"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials-images" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Review Pelanggan</h2>
-            <p class="section-subtitle">Foto dari pelanggan kami</p>
-            <div class="testimonials-slider">
-                <div class="testimonials-track">
-                    <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi1.webp" alt="Testimonial 1" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi2.webp" alt="Testimonial 2" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi3.webp" alt="Testimonial 3" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi4.webp" alt="Testimonial 4" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/testi5.webp" alt="Testimonial 5" style="width: 100%; height: auto; object-fit: cover; border-radius: 20px; border:none;" />
-                    </div>
-                </div>
-                <div class="testimonials-nav">
-                    <button class="nav-prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="testimonials-dots"></div>
-                    <button class="nav-next"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Hubungi Kami</h2>
-            <p class="section-subtitle">Kami siap melayani Anda dengan sepenuh hati</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Lokasi Dapur</h4>
-                            <p>Karawaci, Kota Tangerang</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Telepon & WhatsApp</h4>
-                            <p>+62 812-9262-9247</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>hello@ninnasrecipe.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Jam Operasional</h4>
-                            <p>Setiap Hari: 09.00 - 21.00 WIB</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-cta">
-                    <h3>Ready to Order?</h3>
-                    <p>Pilih Lasagna favorit anda dan kami antar sampai depan rumah</p>
-                    <button class="contact-cta-btn" onclick="openModal()">Pesan Sekarang Juga!</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ninna's Recipe</h3>
-                    <p>Menciptakan hidangan buatan rumah yang lezat sejak 2001. Kelezatan warisan keluarga yang tak terlupakan.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Menu Utama</h3>
-                    <a href="#home">Beranda</a>
-                    <a href="#about">Tentang Kami</a>
-                    <a href="#menu">Menu</a>
-                    <a href="#contact">Kontak</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Informasi Kontak</h3>
-                    <p>Karawaci, Kota Tangerang</p>
-                    <p>+62 812-9262-9247</p>
-                    <p>hello@ninnasrecipe.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Ninna's Recipe. Semua hak cipta dilindungi undang-undang.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Order Modal -->
-    <div id="orderModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Pilih Order Lewat?</h2>
-            </div>
-            <div class="modal-body">
-                <div class="order-buttons">
-                    <a href="https://wa.me/6281292629247?text=halo%20admin%2C%20aku%20mau%20pesan%20Lasagna-nya%20dong" target="_blank" class="order-btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>Pesan di WhatsApp</span>
-                    </a>
-                    
-                    <a href="https://maps.app.goo.gl/fy8udkxxZexKrXNu6" target="_blank" class="order-btn btn-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Datang ke Lokasi</span>
-                    </a>
-                    
-                    <a href="https://www.tokopedia.com/ninnasrecipe" target="_blank" class="order-btn btn-tokopedia">
-                        <i class="fas fa-shopping-bag"></i>
-                        <span>Pesan di Tokopedia</span>
-                    </a>
-                    
-                    <a href="https://id.shp.ee/5TvnyKG" target="_blank" class="order-btn btn-shopee">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>Pesan di Shopee</span>
-                    </a>
-                    
-<div class="order-btn btn-coming-soon">
-                        <i class="fas fa-motorcycle"></i>
-                        <span>Pesan di GoFood</span>
-                    </div>
-                    
-                    <div class="order-btn btn-coming-soon">
-                        <i class="fas fa-utensils"></i>
-                        <span>Pesan di ShopeeFood</span>
-                    </div>
-                    
-                    <div class="order-btn btn-coming-soon">
-                        <i class="fas fa-car"></i>
-                        <span>Pesan di GrabFood</span>
-                    </div>
-                </div>
-            </div>
-<div class="modal-footer">
-                <span>Pengiriman melalui:</span>
-                <span class="delivery-partners">
-                    Grab Express | GoSend | Paxel | Lalamove
-                </span>
-            </div>
-        </div>
+    <section class="video-section" style="max-width: 700px; margin: 0 auto 3rem; background-color: rgb(152,144,87); border-radius: 12px; overflow: hidden; padding-bottom: 24px;">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem; text-align: center; color: white;">
+        Sudah Banyak yang Coba Kelezatan Lasagna by Ninna's Recipe
+      </h2>
+    <div class="video-wrapper" style="margin: 15px;">
+      <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden; max-width: 405px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem;">
+        <iframe src="https://www.youtube.com/embed/ruc9HlP_OCQ" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+      </div>
     </div>
+    <div style="background: var(--white); color: var(--dark-text); border-radius: 12px; padding: 1.5rem 2rem; max-width: 700px; margin: 1rem auto 0; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; text-align: center; color: var(--orange);">
+        Kenapa Pilih Ninna's Beef Lasagna?
+      </h2>
+      <ul style="list-style: none; padding-left: 0; margin: 0; color: #3b2f2f; font-weight: 600; font-size: 0.9rem; text-align: left;">
+        <li style="position: relative; padding-left: 2rem; margin-bottom: 0.8rem;">
+          <span style="position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 900;">✔</span>
+          Saus Bolognese homemade dengan cita rasa klasik
+        </li>
+        <li style="position: relative; padding-left: 2rem; margin-bottom: 0.8rem;">
+          <span style="position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 900;">✔</span>
+          Saus Bechamel super creamy dan full keju
+        </li>
+        <li style="position: relative; padding-left: 2rem; margin-bottom: 0.8rem;">
+          <span style="position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 900;">✔</span>
+          Chilli pickles pedas yang segar dan bikin nagih
+        </li>
+        <li style="position: relative; padding-left: 2rem; margin-bottom: 0.8rem;">
+          <span style="position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 900;">✔</span>
+          Terdapat pilihan porsi sesuai dengan keinginanmu (Personal, Medium, Large)
+        </li>
+        <li style="position: relative; padding-left: 2rem; margin-bottom: 0.8rem;">
+          <span style="position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 900;">✔</span>
+          Resep turun-temurun sejak 2001
+        </li>
+        <li style="position: relative; padding-left: 2rem; margin-bottom: 0.8rem;">
+          <span style="position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 900;">✔</span>
+          Kemasan yang praktis dan aman untuk pengiriman kemana pun
+        </li>
+        <li style="position: relative; padding-left: 2rem; margin-bottom: 0.8rem;">
+          <span style="position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 900;">✔</span>
+          Selalu dapat diskon ongkos kirim
+        </li>
+      </ul>
+    </div>
+  </section>
 
-    <script>
-        // Mobile Navigation Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
+    <section class="offer" style="background-color: #4c3317; color: white;">
+      <h2 style="color: #f4e5b4; font-size: 1.4rem;">Pricelist Beef Lasagna Per Ukuran</h2>
+      <ul>
+        <li style="border: 2px solid white; padding: 0.5rem; border-radius: 8px;">
+          <strong>Ukuran Personal (15x12 cm)</strong><br/>
+          <del style="color: #ffcc00; font-weight: normal;">Rp 99.000</del><br/>
+          <span style="color: #ffcc00; font-weight: bold;">Rp 89.000*</span>
+        </li>
+        <li style="border: 2px solid white; padding: 0.5rem; border-radius: 8px; position: relative;">
+          <strong>Ukuran Medium (20x10 cm)</strong><br/>
+          <del style="color: #ffcc00; font-weight: normal;">Rp 179.000</del><br/>
+          <span style="color: #ffcc00; font-weight: bold;">Rp 173.000*</span><br/>
+          <span style="position: absolute; bottom: 5px; right: 10px; background: #fff; color: #4c3317; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem;">Best Seller</span>
+        </li>
+        <li style="border: 2px solid white; padding: 0.5rem; border-radius: 8px;">
+          <strong>Ukuran Large (20x20 cm)</strong><br/>
+          <del style="color: #ffcc00; font-weight: normal;">Rp 309.000</del><br/>
+          <span style="color: #ffcc00; font-weight: bold;">Rp 299.000</span>
+        </li>
+      </ul>
+    </section>
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
+  <div style="text-align: center; margin: 1rem 0;">
+    <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/arrow-down-animated-gif.gif" alt="Arrow Down Animated" style="max-width: 200px; height: auto;" />
+  </div>
 
-        // Modal Functions
-        function openModal() {
-            document.getElementById('orderModal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
+  <section style="max-width: 700px; margin: 0 auto 3rem; padding: 1rem; border: 3px dashed red; border-radius: 12px; background-color: white; text-align: center; color: var(--dark-text); font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem;">
+    <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/cewe.webp" alt="Promo Image" style="max-width: 100%; border-radius: 12px; margin-bottom: 1rem;" />
+    <p>💥 PAKET PROMO KHUSUS PESANAN di WHATSAPP!</p>
+    <a href="https://mauorder.online/ninnas-recipe" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin: 1rem 0;">
+      <img src="http://ninnasrecipe.com/wp-content/uploads/2025/06/ambil-promo.webp" alt="Ambil Promo" style="max-width: 100%; height: auto; border-radius: 12px;" />
+    </a>
+    <p>✅ 2 Beef Lasagna Personal + Chili Pickles = Rp 163.000</p>
+    <p style="font-weight: 700; font-size: 1.1rem; color: #3b2f2f; margin-top: 1rem;">
+      🚀 Khusus untuk order hari ini, Minna kasih diskon ongkir Rp 10.000!
+    </p>
+  </section>
 
-        function closeModal() {
-            document.getElementById('orderModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+  <section class="video-section" style="max-width: 700px; margin: 0 auto 3rem; background-color: var(--white); border-radius: 12px; overflow: hidden; padding: 1rem; text-align: center; color: var(--dark-text); font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; text-align: center; color: var(--orange);">
+      Testimonials
+    </h2>
+    <div style="max-width: 56vh; margin: 0 auto 1rem;">
+      <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">
+        <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.youtube.com%2Fshorts%2F9NQttIgjpyo&key=925108d922be940af814f71907a7df4b" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe>
+      </div>
+    </div>
+    <div style="max-width: 56vh; margin: 0 auto 1rem;">
+      <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">
+        <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.youtube.com%2Fshorts%2FYwQYLB1J8Kk&key=925108d922be940af814f71907a7df4b" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe>
+      </div>
+    </div>
+    <div style="max-width: 56vh; margin: 0 auto 1rem;">
+      <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">
+        <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.youtube.com%2Fshorts%2Fo082aKyldAw&key=925108d922be940af814f71907a7df4b" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe>
+      </div>
+    </div>
+    <div style="max-width: 56vh; margin: 0 auto 1rem;">
+      <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">
+        <iframe src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fwww.youtube.com%2Fshorts%2F_NqRFkZLCRI&key=925108d922be940af814f71907a7df4b" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe>
+      </div>
+    </div>
+  </section>
 
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('orderModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
+  <section class="video-section" style="max-width: 700px; margin: 0 auto 3rem; background-color: var(--white); border-radius: 12px; padding: 1rem; color: var(--dark-text); font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem;">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; text-align: center; color: var(--orange);">
+      FAQ
+    </h2>
+    <ul style="margin: 0; color: var(--dark-text); font-weight: 600; font-size: 1rem; text-align: left; list-style: none; padding-left: 0;">
+      <li style="margin-bottom: 1rem;">
+        <div style="cursor: pointer; font-weight: 700; font-family: 'Poppins', sans-serif; border: 2px solid #e76f51; border-radius: 8px; padding: 0.5rem; background-color: #f4a261; color: #3b2f2f;" onclick="toggleAnswer(this)">
+          Ninna's Recipe Lokasi dimana? <span style="font-weight: 900; margin-left: 8px;">[+]</span>
+        </div>
+        <div style="display: none; margin-top: 0.5rem; font-weight: 400; font-family: 'Poppins', sans-serif;">
+          Lokasi Kitchen Ninna's Recipe terletak di Karawaci, Tangerang. Produk kami seperti Beef Lasagna bisa dikirimkan ke Jabodetabek dan Bandung dengan tarif ongkir flat mulai 22.500 (belum termasuk diskon ongkir), menggunakan layanan Paxel Sameday, Grab Sameday atau Lalamove Instan
+        </div>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <div style="cursor: pointer; font-weight: 700; font-family: 'Poppins', sans-serif; border: 2px solid #6b8e23; border-radius: 8px; padding: 0.5rem; background-color: #f9cda7; color: #3b2f2f;" onclick="toggleAnswer(this)">
+          Apakah bisa dikirim ke Luar Jabodetabek dan Bandung? <span style="font-weight: 900; margin-left: 8px;">[+]</span>
+        </div>
+        <div style="display: none; margin-top: 0.5rem; font-weight: 400; font-family: 'Poppins', sans-serif;">
+          Selain Jabodetabek dan Bandung, Produk kami bisa dan pernah dikirim ke Kota-kota berikut menggunakan layanan Paxel Nextday: Palembang, Lampung, Denpasar/Bali, Purwokerto, Semarang, Solo, Jogja, Surabaya, Malang, Sidoarjo, dan kota-kota lainnya yang masih terjangkau oleh Kurir Paxel
+        </div>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <div style="cursor: pointer; font-weight: 700; font-family: 'Poppins', sans-serif; border: 2px solid #e76f51; border-radius: 8px; padding: 0.5rem; background-color: #f4a261; color: #3b2f2f;" onclick="toggleAnswer(this)">
+          Apakah bisa COD? <span style="font-weight: 900; margin-left: 8px;">[+]</span>
+        </div>
+        <div style="display: none; margin-top: 0.5rem; font-weight: 400; font-family: 'Poppins', sans-serif;">
+          Pembayaran tidak bisa COD, untuk pesanan melalui WA hanya bisa Transfer.
+        </div>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <div style="cursor: pointer; font-weight: 700; font-family: 'Poppins', sans-serif; border: 2px solid #6b8e23; border-radius: 8px; padding: 0.5rem; background-color: #f9cda7; color: #3b2f2f;" onclick="toggleAnswer(this)">
+          Status Halal? <span style="font-weight: 900; margin-left: 8px;">[+]</span>
+        </div>
+        <div style="display: none; margin-top: 0.5rem; font-weight: 400; font-family: 'Poppins', sans-serif;">
+          Semua Produk Ninna's Recipe menggunakan bahan-bahan yang halal dan berkualitas tinggi, untuk sertifikasi halal memang belum ada dan Kami sedang mengusahakan proses sertifikasi halal ini sesegera mungkin ya
+        </div>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <div style="cursor: pointer; font-weight: 700; font-family: 'Poppins', sans-serif; border: 2px solid #e76f51; border-radius: 8px; padding: 0.5rem; background-color: #f4a261; color: #3b2f2f;" onclick="toggleAnswer(this)">
+          Apakah Free Ongkir? <span style="font-weight: 900; margin-left: 8px;">[+]</span>
+        </div>
+        <div style="display: none; margin-top: 0.5rem; font-weight: 400; font-family: 'Poppins', sans-serif;">
+          Ongkir menyesuaikan Jarak dari kitchen kami, untuk pengiriman dengan opsi termurah bisa menggunakan pengiriman Grab Sameday atau Paxel Sameday
+        </div>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <div style="cursor: pointer; font-weight: 700; font-family: 'Poppins', sans-serif; border: 2px solid #6b8e23; border-radius: 8px; padding: 0.5rem; background-color: #f9cda7; color: #3b2f2f;" onclick="toggleAnswer(this)">
+          Apakah aman dengan pengiriman Sameday? <span style="font-weight: 900; margin-left: 8px;">[+]</span>
+        </div>
+        <div style="display: none; margin-top: 0.5rem; font-weight: 400; font-family: 'Poppins', sans-serif;">
+          Lasagna Kami tahan 24 Jam di suhu ruang dan di perjalanan, kita juga menyediakan vakum pack sebagai tambahan perlindungan pengiriman. Untuk ke Luar Kota dengan pengiriman Nextday, beberapa wilayah kami kirimkan dalam kondisi Frozen untuk menjaga kualitas produk
+        </div>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <div style="cursor: pointer; font-weight: 700; font-family: 'Poppins', sans-serif; border: 2px solid #e76f51; border-radius: 8px; padding: 0.5rem; background-color: #f4a261; color: #3b2f2f;" onclick="toggleAnswer(this)">
+          Apakah bisa beli langsung di Toko? <span style="font-weight: 900; margin-left: 8px;">[+]</span>
+        </div>
+        <div style="display: none; margin-top: 0.5rem; font-weight: 400; font-family: 'Poppins', sans-serif;">
+          Saat ini kami hanya melayani pembelian Secara Online, dan belum ada toko fisik, tapi Pembeli bisa langsung melakukan pengambilan pesanan di Kitchen kami di Karawaci, dengan syarat sudah melakukan pemesanan sebelumnya dan diproses sesuai antrian pesanan
+        </div>
+      </li>
+      <li style="margin-bottom: 1rem;">
+        <div style="cursor: pointer; font-weight: 700; font-family: 'Poppins', sans-serif; border: 2px solid #6b8e23; border-radius: 8px; padding: 0.5rem; background-color: #f9cda7; color: #3b2f2f;" onclick="toggleAnswer(this)">
+          Apakah tersedia di Gofood / Grab Food / Shopee Food? <span style="font-weight: 900; margin-left: 8px;">[+]</span>
+        </div>
+        <div style="display: none; margin-top: 0.5rem; font-weight: 400; font-family: 'Poppins', sans-serif;">
+          Produk Kami belum tersedia di platform online food delivery tersebut, tapi pembeli bisa Checkout di Shopee atau Tokopedia sebagai alternatif tempat pembelian.
+        </div>
+      </li>
+    </ul>
+  </section>
 
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
+  <script>
+    function toggleAnswer(element) {
+      var answer = element.nextElementSibling;
+      var symbol = element.querySelector('span');
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        symbol.textContent = '[+]';
+        element.style.fontWeight = '700';
+      } else {
+        answer.style.display = 'block';
+        symbol.textContent = '[-]';
+        element.style.fontWeight = '900';
+      }
+    }
+  </script>
+  </main>
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+  <footer style="text-align: center; padding: 1rem 0; background-color: #f1eae5; color: black; font-weight: 600;">
+    © 2024 Ninna’s Recipe. Semua hak cipta dilindungi undang-undang.
+  </footer>
 
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 4px 25px rgba(210, 0, 31, 0.15)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 2px 20px rgba(210, 0, 31, 0.1)';
-            }
-        });
-
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.menu-item, .testimonial-item, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Add some interactive effects
-        document.querySelectorAll('.menu-order-btn, .contact-cta-btn, .nav-cta-btn').forEach(btn => {
-            btn.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-2px) scale(1.02)';
-            });
-            
-            btn.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Testimonials Slider
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('#testimonials .testimonial-item');
-        const totalTestimonials = testimonials.length;
-        const track = document.querySelector('.testimonials-track');
-        const dotsContainer = document.querySelector('.testimonials-dots');
-        const prevBtn = document.querySelector('.nav-prev');
-        const nextBtn = document.querySelector('.nav-next');
-
-        // Create dots
-        dotsContainer.innerHTML = ''; // Clear existing dots before creating new ones
-        for (let i = 0; i < totalTestimonials; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToTestimonial(i));
-            dotsContainer.appendChild(dot);
-        }
-
-        const dots = document.querySelectorAll('.dot');
-
-        function updateSlider() {
-            const slideWidth = document.querySelector('.testimonial-item').offsetWidth;
-            track.style.transform = `translateX(-${currentTestimonial * slideWidth}px)`;
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentTestimonial);
-            });
-        }
-
-        function goToTestimonial(index) {
-            currentTestimonial = index;
-            updateSlider();
-        }
-
-        function nextTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
-            updateSlider();
-        }
-
-        function prevTestimonial() {
-            currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
-            updateSlider();
-        }
-
-        // Event listeners
-        nextBtn.addEventListener('click', nextTestimonial);
-        prevBtn.addEventListener('click', prevTestimonial);
-
-        // Initialize slider
-        updateSlider();
-
-        // Swipe support for main testimonial slider
-        let startX = 0;
-        let isDragging = false;
-
-        track.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            isDragging = true;
-        });
-
-        track.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            const currentX = e.touches[0].clientX;
-            const diffX = currentX - startX;
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    prevTestimonial();
-                } else {
-                    nextTestimonial();
-                }
-                isDragging = false;
-            }
-        });
-
-        track.addEventListener('touchend', () => {
-            isDragging = false;
-        });
-
-        // Optional: mouse drag support for desktop
-        track.addEventListener('mousedown', (e) => {
-            startX = e.clientX;
-            isDragging = true;
-        });
-
-        track.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            const currentX = e.clientX;
-            const diffX = currentX - startX;
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    prevTestimonial();
-                } else {
-                    nextTestimonial();
-                }
-                isDragging = false;
-            }
-        });
-
-        track.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        track.addEventListener('mouseleave', () => {
-            isDragging = false;
-        });
-
-        // About Section Slideshow
-        const aboutSlides = document.querySelectorAll('.about-slideshow .slide');
-        let currentAboutSlide = 0;
-
-        function showAboutSlide(index) {
-            aboutSlides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-        }
-
-        function nextAboutSlide() {
-            currentAboutSlide = (currentAboutSlide + 1) % aboutSlides.length;
-            showAboutSlide(currentAboutSlide);
-        }
-
-        setInterval(nextAboutSlide, 4000); // Change slide every 4 seconds
-
-        // Show the first slide initially
-        showAboutSlide(currentAboutSlide);
-
-        // Review Pelanggan Slideshow
-        let currentReviewSlide = 0;
-        const reviewSlides = document.querySelectorAll('#testimonials-images .testimonial-item');
-        const reviewTrack = document.querySelector('#testimonials-images .testimonials-track');
-        const reviewDotsContainer = document.querySelector('#testimonials-images .testimonials-dots');
-        const reviewPrevBtn = document.querySelector('#testimonials-images .nav-prev');
-        const reviewNextBtn = document.querySelector('#testimonials-images .nav-next');
-
-        // Create dots for review slideshow
-        reviewDotsContainer.innerHTML = ''; // Clear existing dots before creating new ones
-        for (let i = 0; i < reviewSlides.length; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToReviewSlide(i));
-            reviewDotsContainer.appendChild(dot);
-        }
-
-        const reviewDots = document.querySelectorAll('#testimonials-images .dot');
-
-        function updateReviewSlider() {
-            const slideWidth = reviewSlides[0].offsetWidth;
-            reviewTrack.style.transform = `translateX(-${currentReviewSlide * slideWidth}px)`;
-            reviewDots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentReviewSlide);
-            });
-        }
-
-        function goToReviewSlide(index) {
-            currentReviewSlide = index;
-            updateReviewSlider();
-        }
-
-        function nextReviewSlide() {
-            currentReviewSlide = (currentReviewSlide + 1) % reviewSlides.length;
-            updateReviewSlider();
-        }
-
-        function prevReviewSlide() {
-            currentReviewSlide = (currentReviewSlide - 1 + reviewSlides.length) % reviewSlides.length;
-            updateReviewSlider();
-        }
-
-        // Event listeners for review slideshow navigation
-        reviewNextBtn.addEventListener('click', nextReviewSlide);
-        reviewPrevBtn.addEventListener('click', prevReviewSlide);
-
-        // Initialize review slideshow
-        updateReviewSlider();
-
-        // Swipe support for review pelanggan slider
-        let reviewStartX = 0;
-        let reviewIsDragging = false;
-
-        reviewTrack.addEventListener('touchstart', (e) => {
-            reviewStartX = e.touches[0].clientX;
-            reviewIsDragging = true;
-        });
-
-        reviewTrack.addEventListener('touchmove', (e) => {
-            if (!reviewIsDragging) return;
-            const currentX = e.touches[0].clientX;
-            const diffX = currentX - reviewStartX;
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    prevReviewSlide();
-                } else {
-                    nextReviewSlide();
-                }
-                reviewIsDragging = false;
-            }
-        });
-
-        reviewTrack.addEventListener('touchend', () => {
-            reviewIsDragging = false;
-        });
-
-        // Mouse drag support for review pelanggan slider
-        reviewTrack.addEventListener('mousedown', (e) => {
-            reviewStartX = e.clientX;
-            reviewIsDragging = true;
-        });
-
-        reviewTrack.addEventListener('mousemove', (e) => {
-            if (!reviewIsDragging) return;
-            const currentX = e.clientX;
-            const diffX = currentX - reviewStartX;
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    prevReviewSlide();
-                } else {
-                    nextReviewSlide();
-                }
-                reviewIsDragging = false;
-            }
-        });
-
-        reviewTrack.addEventListener('mouseup', () => {
-            reviewIsDragging = false;
-        });
-
-        reviewTrack.addEventListener('mouseleave', () => {
-            reviewIsDragging = false;
-        });
-    </script>
-</body>
-</html>
+   </body>
+ </html>
